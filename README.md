@@ -21,7 +21,7 @@
 [![Anti-AI Slop](https://img.shields.io/badge/Aesthetic-Anti--AI_Slop-FF5B61.svg?style=for-the-badge)](#-the-anti-slop-manifesto)
 [![Multi-Agent](https://img.shields.io/badge/Compatible-Antigravity_|_Claude_|_Codex_|_Cursor-00F0FF.svg?style=for-the-badge)](#-one-line-installation)
 
-[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 10 Flagship Skills](#-the-10-flagship-skills) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
+[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 11 Flagship Skills](#-the-11-flagship-skills) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
 
 ---
 
@@ -40,7 +40,7 @@ Most AI coding agents write code that works, but looks and reads like an uninspi
 
 ---
 
-## ⚡ The 10 Flagship Skills
+## ⚡ The 11 Flagship Skills
 
 ```text
 vanzee-skills/
@@ -54,7 +54,8 @@ vanzee-skills/
 │   ├── deep-think-planner/      # 🧠 Metacognitive Reasoning, First-Principles Analysis & Multi-Path Planning
 │   ├── zero-ai-detector/        # 👻 0% AI Detection Bypass (Turnitin/GPTZero), Burstiness & Perplexity
 │   ├── academic-student-support/# 🎓 Dual-Output Academic Mastery (TK to S3, 6 College Papers, Oral Defense)
-│   └── prompt-architect/        # 📐 Meta-Prompt Generator, Ideation Expander & Skills Auto-Mapper
+│   ├── prompt-architect/        # 📐 Meta-Prompt Generator, Ideation Expander & Skills Auto-Mapper
+│   └── business-growth-strategist/# 💼 Corporate Finance, OSS-RBA Licensing & Profit Engine
 ```
 
 ---
@@ -160,6 +161,17 @@ vanzee-skills/
 * **Proactive Ideation Expansion**: Generates 2–3 high-value feature recommendations that 95% of users forget to specify (security guardrails, edge-case fallbacks, analytics, or UI polish).
 * **Automated Skills & Rules Mapping**: Inspects the user's available skill library (`evankristanto`, `universal-responsive`, `web-perf-optimizer`, `conversion-copywriting`, `risk-management`, `deep-think-planner`, `zero-ai-detector`, etc.) and automatically embeds them into the prompt execution directive.
 * **Strict Anti-Slop Meta-Prompts**: Eliminates polite AI filler, conversational fluff, and generic buzzwords. Outputs clean, schema-driven markdown prompts with explicit deny-lists and verification criteria.
+
+---
+
+### 💼 11. `business-growth-strategist` &mdash; Corporate Finance, Licensing & Profit Maximization
+> *Elite strategic advisory for founders, entrepreneurs, and executives. Unlocks true unit economics, risk-based Indonesian & global corporate licensing (OSS-RBA, NIB, PT/CV, HKI, Tax), and high-margin profit strategies with zero AI fluff.*
+
+* **Financial Engineering & Unit Economics**: Formulates fully burdened CAC, LTV, CAC Payback (< 12 mo), Gross Margins (>70%), and Cash Conversion Cycle (CCC) to achieve self-funding negative working capital.
+* **Corporate Licensing (OSS-RBA) & Badan Usaha**: Detailed roadmap comparing PT Perorangan vs PT Biasa vs CV, 5-digit KBLI 2020 classification, environmental permits (SPPL), and mandatory certifications (HKI Merek kelas 1–45, BPOM, Halal BPJPH, PSE Kominfo).
+* **Corporate Tax Structuring**: Navigates PPh Final UMKM 0.5% (PP 55/2022), PKP threshold (Rp 4.8M), Faktur Pajak PPN 11%, and withholding taxes (PPh 21/23/4 ayat 2).
+* **The Best-Option Decision Matrix**: Compares competing growth strategies using weighted multi-variable scoring (Expected Profit, Capital Needs, Execution Speed, Legal Risk, Defensibility).
+* **Founders' Governance**: Protects enterprise equity with 4-year vesting schedules, 1-year cliffs, Bad Leaver repurchase clauses, and IP assignment contracts.
 
 ---
 
@@ -302,6 +314,15 @@ materi 3 menit plus simulasi 3 pertanyaan kritis dosen penguji dan kunci jawaban
 Tolong bedah dulu tujuannya, berikan rekomendasi fitur tambahan yang relevan,
 lalu susun prompt final yang detail dengan auto-inject skills vanzee yang cocok."
 ```
+<!-- slide -->
+### 💼 Corporate Strategy & Profit Maximization
+```text
+"Saya mau bangun bisnis SaaS B2B di Indonesia pakai skill business-growth-strategist.
+Bantu rekomendasikan:
+1. Badan usaha terbaik (PT Biasa vs PT Perorangan) beserta kode KBLI dan izin OSS-RBA.
+2. Analisis unit economics (target CAC, LTV, pricing 3-tier) agar net margin di atas 25%.
+3. Kepatuhan pajak awal (PPh Final 0.5% vs Normal) dan klausul wajib Founders' Agreement."
+```
 ````
 
 ---
@@ -353,10 +374,16 @@ vanzee-skills/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── academic-frameworks-and-guidelines.md # 6 college paper types, TK-S3 pedagogy & defense cheat sheet
-│   └── prompt-architect/
+│   ├── prompt-architect/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── prompt-expansion-and-skills-mapping.md # 4-stage expansion protocol, skill directory & anti-slop rules
+│   └── business-growth-strategist/
 │       ├── SKILL.md
 │       └── references/
-│           └── prompt-expansion-and-skills-mapping.md # 4-stage expansion protocol, skill directory & anti-slop rules
+│           ├── financial-engineering-and-unit-economics.md # CAC/LTV, CCC, burn rate, pricing power & 3-case models
+│           ├── legal-licensing-and-compliance.md           # PT/CV, OSS-RBA, KBLI, HKI, Halal, BPOM, Tax PP 55/2022
+│           └── growth-strategy-and-profit-maximization.md   # Best-Option matrix, GTM, moats, bootstrapping vs VC
 ├── install.ps1                              # Automated installer for Windows environments
 ├── install.sh                               # Automated installer for macOS & Linux
 ├── LICENSE                                  # MIT License

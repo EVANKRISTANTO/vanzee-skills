@@ -102,12 +102,13 @@ echo -e "${BOLD}${WHITE}╰─────────────────�
 
 # --- Step 2: Interactive Skill Selection ---
 echo -e "${BOLD}${WHITE}╭── [2/4] Choose Installation Mode ────────────────────────────────────╮${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${GREEN}[A] Full Flagship Suite (All 10 Skills)                  [DEFAULT]${RESET}  ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${GREEN}[A] Full Flagship Suite (All 11 Skills)                  [DEFAULT]${RESET}  ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[1] Web & UI/UX Craft Pack     (evankristanto, responsive, perf)    ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[2] Growth & Marketing Pack   (copywriting, caption, zero-ai)      ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[3] Deep Reasoning & Prompts  (deep-think, risk, prompt-architect) ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[4] Academic & Student Pack   (academic-support, zero-ai)          ${RESET} ${BOLD}${WHITE}│${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${YELLOW}[C] Custom Selection          (Pilih nomor skill manual 1-10)      ${RESET} ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[5] Enterprise & Business Pack(business-growth, risk, copywriting) ${RESET} ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${YELLOW}[C] Custom Selection          (Pilih nomor skill manual 1-11)      ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}╰───────────────────────────────────────────────────────────────────────╯${RESET}\n"
 
 ALL_SKILL_NAMES=(
@@ -121,9 +122,10 @@ ALL_SKILL_NAMES=(
   "zero-ai-detector"
   "academic-student-support"
   "prompt-architect"
+  "business-growth-strategist"
 )
 
-read -r -p "Pilih preset yang mau di-install [A/1/2/3/4/C] (Tekan ENTER untuk Semua): " USER_CHOICE || USER_CHOICE="A"
+read -r -p "Pilih preset yang mau di-install [A/1/2/3/4/5/C] (Tekan ENTER untuk Semua): " USER_CHOICE || USER_CHOICE="A"
 USER_CHOICE="${USER_CHOICE:-A}"
 
 CHOSEN_SKILLS=()
@@ -145,6 +147,10 @@ case "${USER_CHOICE^^}" in
     CHOSEN_SKILLS=("academic-student-support" "zero-ai-detector")
     echo -e "\n${CYAN}➜ Mode Dipilih: [4] Academic & Student Pack${RESET}"
     ;;
+  5)
+    CHOSEN_SKILLS=("business-growth-strategist" "risk-management" "conversion-copywriting")
+    echo -e "\n${CYAN}➜ Mode Dipilih: [5] Enterprise & Business Pack${RESET}"
+    ;;
   C)
     echo -e "\n${YELLOW}╭── DAFTAR SKILL TERSEDIA ──────────────────────────────────────────────╮${RESET}"
     echo -e "${YELLOW}│${RESET}  [1] [WEB] evankristanto           - Token Compaction, Bento/Aura UI"
@@ -157,6 +163,7 @@ case "${USER_CHOICE^^}" in
     echo -e "${YELLOW}│${RESET}  [8] [0AI] zero-ai-detector       - 0% Turnitin/GPTZero Detection Bypass"
     echo -e "${YELLOW}│${RESET}  [9] [EDU] academic-student-support - Dual-Output Mastery, 6 Papers"
     echo -e "${YELLOW}│${RESET}  [10] [PRM] prompt-architect      - Meta-Prompt Generator, Idea Expander"
+    echo -e "${YELLOW}│${RESET}  [11] [BIZ] business-growth-strategist - Unit Economics, Licensing (OSS/PT), Profit"
     echo -e "${YELLOW}╰───────────────────────────────────────────────────────────────────────╯${RESET}\n"
     read -r -p "Ketik nomor skill yang mau dipasang (contoh: 1 3 5 8): " CUSTOM_NUMS || CUSTOM_NUMS=""
     if [ -z "$CUSTOM_NUMS" ]; then
@@ -173,7 +180,7 @@ case "${USER_CHOICE^^}" in
     ;;
   *)
     CHOSEN_SKILLS=("${ALL_SKILL_NAMES[@]}")
-    echo -e "\n${GREEN}➜ Mode Dipilih: [A] Full Flagship Suite (Semua 9 Skill)${RESET}"
+    echo -e "\n${GREEN}➜ Mode Dipilih: [A] Full Flagship Suite (Semua 11 Skill)${RESET}"
     ;;
 esac
 
@@ -264,6 +271,7 @@ for sn in "${CHOSEN_SKILLS[@]}"; do
     zero-ai-detector)        echo -e "  ${PURPLE}• Stealth AI:${RESET}     ${DIM}\"Humanize artikel ini biar skor AI 0% pakai zero-ai-detector\"${RESET}" ;;
     academic-student-support)echo -e "  ${PURPLE}• Tugas Kuliah:${RESET}   ${DIM}\"Bantu buat makalah S1 dan panduan ujian pakai academic-student-support\"${RESET}" ;;
     prompt-architect)        echo -e "  ${PURPLE}• Prompt Gen:${RESET}     ${DIM}\"Bagusin dan kembangkan ide prompt ini pakai prompt-architect\"${RESET}" ;;
+    business-growth-strategist)echo -e "  ${PURPLE}• Business Adv:${RESET}   ${DIM}\"Analisis kelayakan bisnis, margin profit, dan izin OSS pakai business-growth-strategist\"${RESET}" ;;
   esac
 done
 

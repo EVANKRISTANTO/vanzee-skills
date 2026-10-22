@@ -40,7 +40,7 @@ Most AI coding agents write code that works, but looks and reads like an uninspi
 
 ---
 
-## ⚡ The 4 Flagship Skills
+## ⚡ The 5 Flagship Skills
 
 ```text
 vanzee-skills/
@@ -48,7 +48,8 @@ vanzee-skills/
 │   ├── evankristanto/          # 💎 Flagship Web Craft, Bento/Aura UI, Security Shield, SEO & Email
 │   ├── universal-responsive/    # 📱 Multi-Device Layout Engine (Container Queries, clamp(), Foldable to 4K)
 │   ├── web-perf-optimizer/      # 🚀 Sub-Second LCP, Zero CLS, Sub-50ms INP, Next-Gen Asset Diet
-│   └── conversion-copywriting/  # 🎯 Anti-AI Human Voice, B2B Enterprise Copy, Objection Annihilation
+│   ├── conversion-copywriting/  # 🎯 Anti-AI Human Voice, B2B Enterprise Copy, Objection Annihilation
+│   └── social-caption-maker/    # 🔥 Viral Social Media Hooks, Social SEO & Gen Z Engagement Engine
 ```
 
 ---
@@ -94,6 +95,16 @@ vanzee-skills/
 * **The Specificity Equation**: Replaces vague corporate puffery with concrete mechanisms, cold numbers, and time constraints.
 * **Dynamic Cadence & Rhythm**: Breaks monotonous AI syntax by alternating punchy 3-word impacts with descriptive technical depth.
 * **Conversion Blueprints**: Complete copy architectures for SaaS landing pages, B2B proposals, 4-sentence cold emails to executives, and objection-annihilating pricing FAQs.
+
+---
+
+### 🔥 5. `social-caption-maker` &mdash; Viral Social Media Hooks & Social SEO Engine
+> *Stop the thumb in 0.4 seconds. Engineered for Instagram Explore, TikTok SEO, X search, and Gen Z / digital native virality.*
+
+* **The 80-Character Rule**: Wins the line preview before the "...more" truncate fold, forcing user expand clicks and boosting algorithmic dwell time.
+* **Social SEO Keyword Embedding**: Ingests natural search queries (*"tips belajar UI UX"*, *"cara bikin web bento"*) directly into lines 1 & 2 to rank on Instagram Explore and TikTok search feeds.
+* **Anti-Cringe & Gen Z Authenticity Engine**: Eliminates bot markers (`✨🚀🔥` at the start of every sentence) and forced corporate slang. Uses clean double-line breaks and conversational, high-retention hooks.
+* **Engagement Triggers**: Dedicated closers for **Saves** (tutorials/checklists), **Shares** (relatable POV truths), and **Comments** (low-friction binary debates: *"Lo tim A atau B?"*).
 
 ---
 
@@ -192,6 +203,14 @@ and apply content-visibility to all below-the-fold components."
 using conversion-copywriting. Make it sound like a seasoned Principal Architect speaking directly
 to a CTO, with zero AI clichés and bulletproof social proof framing."
 ```
+<!-- slide -->
+### 🔥 Viral Social Caption & Social SEO
+```text
+"Buatkan caption Instagram Carousel dan TikTok pakai social-caption-maker tentang
+tips UI/UX Bento Grid modern. Buat hook-nya nendang di bawah 70 karakter sebelum tombol 'more',
+pakai bahasa santai ala Gen Z tech creator, sisipkan SEO keyword 'desain website bento',
+dan tambahkan save trigger di akhir."
+```
 ```
 
 ---
@@ -216,12 +235,17 @@ vanzee-skills/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── performance-audit-checklist.md # Core Web Vitals, asset diet & main-thread relief
-│   └── conversion-copywriting/
+│   ├── conversion-copywriting/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── anti-ai-voice-engine.md      # The anti-slop human voice dictionary & cadence rules
+│   │       ├── landing-page-blueprints.md   # High-converting SaaS, B2B & agency copy frameworks
+│   │       └── b2b-sales-and-pitches.md     # 4-sentence cold executive outreach & proposal scripts
+│   └── social-caption-maker/
 │       ├── SKILL.md
 │       └── references/
-│           ├── anti-ai-voice-engine.md      # The anti-slop human voice dictionary & cadence rules
-│           ├── landing-page-blueprints.md   # High-converting SaaS, B2B & agency copy frameworks
-│           └── b2b-sales-and-pitches.md     # 4-sentence cold executive outreach & proposal scripts
+│           ├── hook-library-and-anti-cringe.md # 50+ viral hooks, retention triggers & Gen Z tone
+│           └── platform-playbooks.md          # Algorithmic architectures for IG, TikTok, X, Threads, LinkedIn
 ├── install.ps1                              # Automated installer for Windows environments
 ├── install.sh                               # Automated installer for macOS & Linux
 ├── LICENSE                                  # MIT License

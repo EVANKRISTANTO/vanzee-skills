@@ -1,13 +1,15 @@
 <#
 .SYNOPSIS
-    VANZEE-SKILLS INSTALLER FOR WINDOWS (PowerShell)
+    VANZEE-SKILLS INTERACTIVE INSTALLER FOR WINDOWS (PowerShell)
     The Definitive Web Craft & Growth Skills Suite for AI Coding Agents.
     Developed by Evan Kristanto (Vanzee) - https://github.com/EVANKRISTANTO/vanzee-skills
 #>
 [CmdletBinding()]
 param(
     [ValidateSet('auto', 'antigravity', 'claude', 'codex', 'all')]
-    [string]$Target = 'auto'
+    [string]$Target = 'auto',
+
+    [string]$Preset = ''
 )
 
 $ErrorActionPreference = 'Stop'
@@ -16,7 +18,7 @@ Clear-Host
 Write-Host ""
 Write-Host "   __      __            ______              ____ __   _ __ __     " -ForegroundColor Cyan
 Write-Host "   \ \    / /___ _____  /_  __/____  ___    / __// /__(_) // /____ " -ForegroundColor Cyan
-Write-Host "    \ \/\/ // _ `/ _ \  / /  / _  / / -_)  _\ \ /  '_// // // (_-< " -ForegroundColor Magenta
+Write-Host "    \ \/\/ // _ / _ \  / /  / _  / / -_)  _\ \ /  '_// // // (_-< " -ForegroundColor Magenta
 Write-Host "     \_/\_/ \_,_/_//_/ /_/   \_,_/  \__/  /___//_/\_\/_//_//_/___/ " -ForegroundColor Magenta
 Write-Host "   * VANZEE SKILLS SUITE - High-Craft Autonomous Agent Intelligence" -ForegroundColor Yellow
 Write-Host "   Developed with obsession by Evan Kristanto (Vanzee)" -ForegroundColor DarkGray
@@ -46,6 +48,85 @@ if ($detectedAgents.Count -gt 0) {
 }
 Write-Host "+-----------------------------------------------------------------------+" -ForegroundColor White
 Write-Host ""
+
+$AllSkills = @(
+    @{ Id = 1; Name = 'evankristanto';           Desc = 'Token Compaction, Bento/Aura UI, Security Shield, SEO & Email'; Tag = 'WEB' },
+    @{ Id = 2; Name = 'universal-responsive';    Desc = 'Container Queries, clamp() Math, Foldables to 4K Ultra-Wide'; Tag = 'MOB' },
+    @{ Id = 3; Name = 'web-perf-optimizer';      Desc = '100/100 Lighthouse, Sub-second LCP, Zero CLS, Sub-50ms INP'; Tag = 'SPD' },
+    @{ Id = 4; Name = 'conversion-copywriting';  Desc = 'Human Voice Engine, B2B Pitch, Landing Page Blueprints'; Tag = 'CPY' },
+    @{ Id = 5; Name = 'social-caption-maker';    Desc = 'Viral Hooks, Social SEO, Gen Z Engagement Engine'; Tag = 'VIR' },
+    @{ Id = 6; Name = 'risk-management';         Desc = '5x5 Matrix, Pre-Mortem, Zero-Downtime Rollbacks'; Tag = 'RSK' },
+    @{ Id = 7; Name = 'deep-think-planner';      Desc = 'Metacognitive First-Principles, Multi-Path Planning'; Tag = 'THK' },
+    @{ Id = 8; Name = 'zero-ai-detector';        Desc = '0% Turnitin/GPTZero Detection Bypass, Burstiness Math'; Tag = '0AI' },
+    @{ Id = 9; Name = 'academic-student-support';Desc = 'Dual-Output Mastery, 6 College Papers, Oral Defense Prep'; Tag = 'EDU' }
+)
+
+Write-Host "+-- [2/4] Choose Installation Mode ------------------------------------+" -ForegroundColor White
+Write-Host "|  [A] Full Flagship Suite (All 9 Skills)                   [DEFAULT]  |" -ForegroundColor Green
+Write-Host "|  [1] Web & UI/UX Craft Pack     (evankristanto, responsive, perf)     |" -ForegroundColor Cyan
+Write-Host "|  [2] Growth & Marketing Pack   (copywriting, caption, zero-ai)       |" -ForegroundColor Cyan
+Write-Host "|  [3] Deep Reasoning & Safety   (deep-think, risk-management)         |" -ForegroundColor Cyan
+Write-Host "|  [4] Academic & Student Pack   (academic-support, zero-ai)           |" -ForegroundColor Cyan
+Write-Host "|  [C] Custom Selection          (Pilih nomor skill manual)            |" -ForegroundColor Yellow
+Write-Host "+-----------------------------------------------------------------------+" -ForegroundColor White
+
+$choice = $Preset
+if ([string]::IsNullOrWhiteSpace($choice)) {
+    Write-Host ""
+    $choice = Read-Host "Pilih preset yang mau di-install [A/1/2/3/4/C] (Tekan ENTER untuk Semua)"
+    if ([string]::IsNullOrWhiteSpace($choice)) { $choice = 'A' }
+}
+
+$chosenSkillNames = @()
+
+switch ($choice.ToUpper().Trim()) {
+    '1' {
+        $chosenSkillNames = @('evankristanto', 'universal-responsive', 'web-perf-optimizer')
+        Write-Host "`n> Mode Dipilih: [1] Web & UI/UX Craft Pack" -ForegroundColor Cyan
+    }
+    '2' {
+        $chosenSkillNames = @('conversion-copywriting', 'social-caption-maker', 'zero-ai-detector')
+        Write-Host "`n> Mode Dipilih: [2] Growth & Marketing Pack" -ForegroundColor Cyan
+    }
+    '3' {
+        $chosenSkillNames = @('deep-think-planner', 'risk-management')
+        Write-Host "`n> Mode Dipilih: [3] Deep Reasoning & Safety Pack" -ForegroundColor Cyan
+    }
+    '4' {
+        $chosenSkillNames = @('academic-student-support', 'zero-ai-detector')
+        Write-Host "`n> Mode Dipilih: [4] Academic & Student Pack" -ForegroundColor Cyan
+    }
+    'C' {
+        Write-Host ""
+        Write-Host "+-- DAFTAR SKILL TERSEDIA ----------------------------------------------+" -ForegroundColor Yellow
+        foreach ($s in $AllSkills) {
+            Write-Host ("|  [" + $s.Id + "] [" + $s.Tag + "] " + $s.Name.PadRight(26) + " - " + $s.Desc) -ForegroundColor Gray
+        }
+        Write-Host "+-----------------------------------------------------------------------+" -ForegroundColor Yellow
+        Write-Host ""
+        $customInput = Read-Host "Ketik nomor skill yang mau dipasang (pisahkan dengan spasi/koma, contoh: 1 3 5 8)"
+        if ([string]::IsNullOrWhiteSpace($customInput)) {
+            $chosenSkillNames = $AllSkills | ForEach-Object { $_.Name }
+        } else {
+            $tokens = $customInput -split '[,\s]+'
+            foreach ($t in $tokens) {
+                $num = 0
+                if ([int]::TryParse($t.Trim(), [ref]$num)) {
+                    $matched = $AllSkills | Where-Object { $_.Id -eq $num }
+                    if ($matched) { $chosenSkillNames += $matched.Name }
+                }
+            }
+        }
+        if ($chosenSkillNames.Count -eq 0) {
+            Write-Host "Tidak ada nomor valid yang dipilih, default ke semua skill." -ForegroundColor DarkGray
+            $chosenSkillNames = $AllSkills | ForEach-Object { $_.Name }
+        }
+    }
+    Default {
+        $chosenSkillNames = $AllSkills | ForEach-Object { $_.Name }
+        Write-Host "`n> Mode Dipilih: [A] Full Flagship Suite (Semua 9 Skill)" -ForegroundColor Green
+    }
+}
 
 $Destinations = @()
 switch ($Target) {
@@ -83,20 +164,8 @@ switch ($Target) {
     }
 }
 
-Write-Host "+-- [2/4] Skill Suite Inventory (9 Flagship Skills) ------------------+" -ForegroundColor White
-Write-Host "|  01. [GEM] evankristanto          Token Compaction, Bento/Aura UI, Security Shield" -ForegroundColor Cyan
-Write-Host "|  02. [MOB] universal-responsive  Container Queries, clamp() Math, Foldables to 4K" -ForegroundColor Cyan
-Write-Host "|  03. [SPD] web-perf-optimizer    100/100 Lighthouse, Sub-second LCP, Zero CLS" -ForegroundColor Cyan
-Write-Host "|  04. [CPY] conversion-copywriting Human Voice Engine, B2B Pitch, Landing Page Copy" -ForegroundColor Cyan
-Write-Host "|  05. [VIR] social-caption-maker  Viral Hooks, Social SEO, Gen Z Engagement Engine" -ForegroundColor Cyan
-Write-Host "|  06. [RSK] risk-management       5x5 Matrix, Pre-Mortem, Zero-Downtime Rollbacks" -ForegroundColor Cyan
-Write-Host "|  07. [THK] deep-think-planner    Metacognitive First-Principles, Multi-Path Plans" -ForegroundColor Cyan
-Write-Host "|  08. [0AI] zero-ai-detector      0% Turnitin/GPTZero Detection Bypass, Burstiness" -ForegroundColor Cyan
-Write-Host "|  09. [EDU] academic-student-support Dual-Output Mastery, 6 College Papers, Oral Prep" -ForegroundColor Cyan
-Write-Host "+-----------------------------------------------------------------------+" -ForegroundColor White
 Write-Host ""
-
-Write-Host "+-- [3/4] Installing Skills into Environment ---------------------------+" -ForegroundColor White
+Write-Host "+-- [3/4] Installing Selected Skills -----------------------------------+" -ForegroundColor White
 
 $totalInstalled = 0
 foreach ($dest in $Destinations) {
@@ -105,11 +174,14 @@ foreach ($dest in $Destinations) {
         New-Item -ItemType Directory -Path $dest -Force | Out-Null
     }
 
-    Get-ChildItem -Path $SkillsSrc -Directory | ForEach-Object {
-        $targetDir = Join-Path $dest $_.Name
-        Copy-Item -Path $_.FullName -Destination $targetDir -Recurse -Force
-        Write-Host ("|    [OK] Installed " + $_.Name) -ForegroundColor Green
-        $totalInstalled++
+    foreach ($skillName in $chosenSkillNames) {
+        $srcDir = Join-Path $SkillsSrc $skillName
+        if (Test-Path $srcDir) {
+            $targetDir = Join-Path $dest $skillName
+            Copy-Item -Path $srcDir -Destination $targetDir -Recurse -Force
+            Write-Host ("|    [OK] Installed " + $skillName) -ForegroundColor Green
+            $totalInstalled++
+        }
     }
 }
 Write-Host "+-----------------------------------------------------------------------+" -ForegroundColor White
@@ -118,19 +190,24 @@ Write-Host ""
 Write-Host "=========================================================================" -ForegroundColor Green
 Write-Host "                INSTALLATION COMPLETED SUCCESSFULLY!                     " -ForegroundColor Green
 Write-Host "=========================================================================" -ForegroundColor Green
-Write-Host (" Total Packages Deployed: " + $totalInstalled + " skills") -ForegroundColor White
+Write-Host (" Total Selected Packages: " + $chosenSkillNames.Count + " skills") -ForegroundColor White
+Write-Host (" Total Installed Targets: " + $totalInstalled + " instances") -ForegroundColor White
 Write-Host (" Active Target Path(s):   " + ($Destinations -join '; ')) -ForegroundColor Cyan
 Write-Host ""
-Write-Host "Quick Interactive Prompts to Try Right Now:" -ForegroundColor White
-Write-Host "  * Bento UI:       'Bikin dashboard modern bento pakai evankristanto'" -ForegroundColor Magenta
-Write-Host "  * Responsive:     'Refactor landing page ini pakai universal-responsive'" -ForegroundColor Magenta
-Write-Host "  * Performance:    'Audit Core Web Vitals website ini pakai web-perf-optimizer'" -ForegroundColor Magenta
-Write-Host "  * Copywriting:    'Buat landing page value prop pakai conversion-copywriting'" -ForegroundColor Magenta
-Write-Host "  * Viral Caption:  'Bikin caption Instagram carousel pakai social-caption-maker'" -ForegroundColor Magenta
-Write-Host "  * Risk Audit:     'Analisis resiko dan skenario pre-mortem pakai risk-management'" -ForegroundColor Magenta
-Write-Host "  * Deep Think:     'Pikirkan dulu arsitektur terbaik pakai deep-think-planner'" -ForegroundColor Magenta
-Write-Host "  * Stealth AI:     'Humanize artikel ini biar skor AI 0% pakai zero-ai-detector'" -ForegroundColor Magenta
-Write-Host "  * Tugas Kuliah:   'Bantu buat makalah S1 dan panduan ujian pakai academic-student-support'" -ForegroundColor Magenta
+Write-Host "Quick Prompts to Try Based on Your Selection:" -ForegroundColor White
+foreach ($sn in $chosenSkillNames) {
+    switch ($sn) {
+        'evankristanto'           { Write-Host "  * Bento UI:      'Bikin dashboard modern bento pakai evankristanto'" -ForegroundColor Magenta }
+        'universal-responsive'    { Write-Host "  * Responsive:    'Refactor landing page ini pakai universal-responsive'" -ForegroundColor Magenta }
+        'web-perf-optimizer'      { Write-Host "  * Performance:   'Audit Core Web Vitals website ini pakai web-perf-optimizer'" -ForegroundColor Magenta }
+        'conversion-copywriting'  { Write-Host "  * Copywriting:   'Buat landing page value prop pakai conversion-copywriting'" -ForegroundColor Magenta }
+        'social-caption-maker'    { Write-Host "  * Viral Caption: 'Bikin caption Instagram carousel pakai social-caption-maker'" -ForegroundColor Magenta }
+        'risk-management'         { Write-Host "  * Risk Audit:    'Analisis resiko dan skenario pre-mortem pakai risk-management'" -ForegroundColor Magenta }
+        'deep-think-planner'      { Write-Host "  * Deep Think:    'Pikirkan dulu arsitektur terbaik pakai deep-think-planner'" -ForegroundColor Magenta }
+        'zero-ai-detector'        { Write-Host "  * Stealth AI:    'Humanize artikel ini biar skor AI 0% pakai zero-ai-detector'" -ForegroundColor Magenta }
+        'academic-student-support'{ Write-Host "  * Tugas Kuliah:  'Bantu buat makalah S1 dan panduan ujian pakai academic-student-support'" -ForegroundColor Magenta }
+    }
+}
 Write-Host ""
 Write-Host " Crafted with passion by Evan Kristanto (Vanzee) - Enjoy your superpower!" -ForegroundColor DarkGray
 Write-Host ""

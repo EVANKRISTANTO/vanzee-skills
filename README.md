@@ -40,7 +40,7 @@ Most AI coding agents write code that works, but looks and reads like an uninspi
 
 ---
 
-## ⚡ The 5 Flagship Skills
+## ⚡ The 9 Flagship Skills
 
 ```text
 vanzee-skills/
@@ -49,7 +49,11 @@ vanzee-skills/
 │   ├── universal-responsive/    # 📱 Multi-Device Layout Engine (Container Queries, clamp(), Foldable to 4K)
 │   ├── web-perf-optimizer/      # 🚀 Sub-Second LCP, Zero CLS, Sub-50ms INP, Next-Gen Asset Diet
 │   ├── conversion-copywriting/  # 🎯 Anti-AI Human Voice, B2B Enterprise Copy, Objection Annihilation
-│   └── social-caption-maker/    # 🔥 Viral Social Media Hooks, Social SEO & Gen Z Engagement Engine
+│   ├── social-caption-maker/    # 🔥 Viral Social Media Hooks, Social SEO & Gen Z Engagement Engine
+│   ├── risk-management/         # 🛡️ Proactive Risk Forecasting, 5x5 Matrix, Pre-Mortem & Rollback
+│   ├── deep-think-planner/      # 🧠 Metacognitive Reasoning, First-Principles Analysis & Multi-Path Planning
+│   ├── zero-ai-detector/        # 👻 0% AI Detection Bypass (Turnitin/GPTZero), Burstiness & Perplexity
+│   └── academic-student-support/# 🎓 Dual-Output Academic Mastery (TK to S3, 6 College Papers, Oral Defense)
 ```
 
 ---
@@ -105,6 +109,46 @@ vanzee-skills/
 * **Social SEO Keyword Embedding**: Ingests natural search queries (*"tips belajar UI UX"*, *"cara bikin web bento"*) directly into lines 1 & 2 to rank on Instagram Explore and TikTok search feeds.
 * **Anti-Cringe & Gen Z Authenticity Engine**: Eliminates bot markers (`✨🚀🔥` at the start of every sentence) and forced corporate slang. Uses clean double-line breaks and conversational, high-retention hooks.
 * **Engagement Triggers**: Dedicated closers for **Saves** (tutorials/checklists), **Shares** (relatable POV truths), and **Comments** (low-friction binary debates: *"Lo tim A atau B?"*).
+
+---
+
+### 🛡️ 6. `risk-management` &mdash; Proactive Risk Forecasting & Pre-Mortem Engine
+> *Forecast failure modes, calculate blast radius, and formulate rollback safeguards before taking irreversible action.*
+
+* **The 5x5 Risk Assessment Matrix**: Measures severity (Catastrophic to Insignificant) against likelihood to objectively flag critical architectural and security vulnerabilities.
+* **Pre-Mortem Failure Simulation**: Assumes the project failed in production 6 months from now and reverse-engineers bulletproof preventive immunity today.
+* **Two-Way vs. One-Way Doors**: Distinguishes between rapid reversible experiments (Type 2) and irreversible high-impact changes (Type 1, e.g. schema drops, auth overhaul).
+* **Zero-Downtime Rollbacks**: Mandates an instant rollback procedure and non-destructive Expand-Contract migration plan for every change.
+
+---
+
+### 🧠 7. `deep-think-planner` &mdash; Metacognitive Reasoning & First-Principles Planning
+> *Forces the AI to pause, deconstruct ambiguous requests, uncover hidden constraints, and synthesize the optimal multi-path strategy.*
+
+* **Intent & Ambiguity Deconstruction**: Strips superficial framing to identify the physical, logical core of the problem before writing any code.
+* **Multi-Path Exploration (Rule of 3)**: Systematically generates and compares Option A (Minimalist/Ponytail), Option B (Enterprise Modularity), and Option C (Radical Simplification).
+* **Edge-Case & Concurrency Audits**: Identifies race conditions, memory boundaries, and malformed inputs upfront.
+* **Deterministic Execution Blueprint**: Outputs an ordered roadmap with verifiable micro-checkpoints before execution.
+
+---
+
+### 👻 8. `zero-ai-detector` &mdash; 0% AI Detection Bypass & Stealth Humanizer
+> *Reverse-engineers GPTZero, Turnitin AI, Originality.ai, and Copyleaks to produce 100% human-grade, undetectable prose.*
+
+* **Burstiness Engineering**: Radically varies sentence lengths and rhythmic structures (alternating 3-word punches with 28-word complex clauses) to eliminate flat machine cadences.
+* **Perplexity Elevation**: Injects domain-specific nouns, active physical verbs, and localized idioms to break predictable top-token distributions.
+* **N-Gram Blacklist Enforcement**: Permanently scrubs detectable AI staples (*"delve", "testament to", "multifaceted", "pivotal", "in conclusion", "furthermore"*).
+* **Asymmetric Paragraph Weights**: Eradicates the robotic 3-equal-paragraph template in favor of dynamic human pacing.
+
+---
+
+### 🎓 9. `academic-student-support` &mdash; Dual-Output Academic Mastery (TK to S3)
+> *High-grade academic assignments that impress teachers and professors, paired with a student mastery guide for flawless oral defense.*
+
+* **The Dual-Output Guarantee**: Every task delivers (1) the ready-to-submit academic paper/presentation and (2) a 3-minute student mastery cheatsheet with predicted exam questions.
+* **6 Major Academic Deliverables**: Makalah/Paper ilmiah, Laporan praktikum lab, Review jurnal ilmiah (SINTA/Scopus), Studi kasus, Slide deck presentasi (dengan *Speaker Notes* naskah ucapan), dan Skripsi/Tesis/Disertasi.
+* **Full Pedagogical Spectrum**: Tailors terminology and depth across PAUD/TK, SD (analogi konkret), SMP, SMA (analisis kritis), hingga Pascasarjana S1–S3 (metodologi valid, gap riset, dan *novelty*).
+* **Defense Simulator**: Equips students with smart answers to the 3 hardest questions professors and teachers ask during seminars.
 
 ---
 
@@ -211,6 +255,34 @@ tips UI/UX Bento Grid modern. Buat hook-nya nendang di bawah 70 karakter sebelum
 pakai bahasa santai ala Gen Z tech creator, sisipkan SEO keyword 'desain website bento',
 dan tambahkan save trigger di akhir."
 ```
+<!-- slide -->
+### 🛡️ Proactive Risk Assessment & Pre-Mortem
+```text
+"Audit resiko arsitektur migrasi database Postgres dari single-region ke multi-region
+pakai skill risk-management. Buat analisis 5x5 matrix, simulasi skenario kegagalan pre-mortem,
+dan susun prosedur safe rollback tanpa downtime."
+```
+<!-- slide -->
+### 🧠 Deep Think & First-Principles Planning
+```text
+"Pikirkan dulu dan analisis secara mendalam pakai deep-think-planner: bagaimana cara terbaik
+merancang sistem autentikasi multi-tenant dengan RBAC dan audit log? Urai constraint-nya,
+bandingkan 3 pendekatan arsitektur beserta trade-off-nya, lalu susun roadmap eksekusinya."
+```
+<!-- slide -->
+### 👻 0% AI Detection Humanizer
+```text
+"Ubah artikel akademik tentang kecerdasan buatan ini pakai zero-ai-detector biar 100% lolos
+Turnitin AI detector dan GPTZero (skor AI 0%). Buat kalimatnya memiliki burstiness tinggi,
+tingkatkan perplexity dengan istilah riil, dan buang semua kata klise AI seperti delve dan furthermore."
+```
+<!-- slide -->
+### 🎓 Academic Support & Panduan Ujian Dosen
+```text
+"Bantu buatkan Makalah Analisis Kasus Manajemen Krisis Perusahaan Teknologi pakai skill academic-student-support.
+Buat Bagian 1: Makalah lengkap standar akademik S1 dengan rujukan APA 7th, dan Bagian 2: Cheatsheet penguasaan
+materi 3 menit plus simulasi 3 pertanyaan kritis dosen penguji dan kunci jawabannya."
+```
 ```
 
 ---
@@ -241,11 +313,27 @@ vanzee-skills/
 │   │       ├── anti-ai-voice-engine.md      # The anti-slop human voice dictionary & cadence rules
 │   │       ├── landing-page-blueprints.md   # High-converting SaaS, B2B & agency copy frameworks
 │   │       └── b2b-sales-and-pitches.md     # 4-sentence cold executive outreach & proposal scripts
-│   └── social-caption-maker/
+│   ├── social-caption-maker/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── hook-library-and-anti-cringe.md # 50+ viral hooks, retention triggers & Gen Z tone
+│   │       └── platform-playbooks.md          # Algorithmic architectures for IG, TikTok, X, Threads, LinkedIn
+│   ├── risk-management/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── risk-assessment-matrix.md    # 5x5 severity matrix, pre-mortem protocol & safe rollbacks
+│   ├── deep-think-planner/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── metacognitive-frameworks.md  # 4-stage reasoning protocol & multi-path tradeoff matrices
+│   ├── zero-ai-detector/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── detection-mechanics-and-bypass.md # Perplexity & burstiness math, Turnitin/GPTZero bypass
+│   └── academic-student-support/
 │       ├── SKILL.md
 │       └── references/
-│           ├── hook-library-and-anti-cringe.md # 50+ viral hooks, retention triggers & Gen Z tone
-│           └── platform-playbooks.md          # Algorithmic architectures for IG, TikTok, X, Threads, LinkedIn
+│           └── academic-frameworks-and-guidelines.md # 6 college paper types, TK-S3 pedagogy & defense cheat sheet
 ├── install.ps1                              # Automated installer for Windows environments
 ├── install.sh                               # Automated installer for macOS & Linux
 ├── LICENSE                                  # MIT License

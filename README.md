@@ -1,67 +1,124 @@
 <div align="center">
 
-# ⚡ vanzee-skills
+```text
+██╗   ██╗ █████╗ ███╗   ██╗███████╗███████╗███████╗    ███████╗██╗  ██╗██╗██╗     ██╗     ███████╗
+██║   ██║██╔══██╗████╗  ██║╚══███╔╝██╔════╝██╔════╝    ██╔════╝██║ ██╔╝██║██║     ██║     ██╔════╝
+██║   ██║███████║██╔██╗ ██║  ███╔╝ █████╗  █████╗      ███████╗█████╔╝ ██║██║     ██║     ███████╗
+╚██╗ ██╔╝██╔══██║██║╚██╗██║ ███╔╝  ██╔══╝  ██╔══╝      ╚════██║██╔═██╗ ██║██║     ██║     ╚════██║
+ ╚████╔╝ ██║  ██║██║ ╚████║███████╗███████╗███████╗    ███████║██║  ██╗██║███████╗███████╗███████║
+  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝╚══════╝    ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝
+```
 
-**The definitive web craft & growth skills suite for autonomous AI coding agents.**  
-*High-signal prompt engineering, modern tactile UI/UX, zero-break responsive layouts, sub-second web performance, and enterprise-grade conversion copywriting.*
+### **The Definitive Web Craft, Design Intelligence & Growth Suite for Autonomous AI Coding Agents**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![Agent Skills](https://img.shields.io/badge/Spec-Agent%20Skills-purple.svg?style=flat-square)](https://agenticskills.io)
-[![Antigravity](https://img.shields.io/badge/AI-Antigravity%202.0-orange.svg?style=flat-square)](https://github.com/google-deepmind)
-[![Claude Code](https://img.shields.io/badge/AI-Claude%20Code-d97706.svg?style=flat-square)](https://claude.ai)
-[![Zero AI Slop](https://img.shields.io/badge/Design-Anti--AI%20Slop-00E5FF.svg?style=flat-square)](#)
+*Stop accepting generic AI output. Turn your AI assistant into an elite design engineer, defensive security architect, performance specialist, and conversion copywriter.*
 
-[Overview](#-suite-overview) • [Installation](#-installation) • [The 4 Flagship Skills](#-the-4-flagship-skills) • [Prompt Recipes](#-interactive-usage-recipes) • [Contributing](#-contributing)
+---
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Agent Skills Standard](https://img.shields.io/badge/Agent_Skills-Open_Standard-8B5CF6.svg?style=for-the-badge)](https://agenticskills.io)
+[![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100%2F100-00E676.svg?style=for-the-badge)](#-3-web-perf-optimizer--ultra-lightweight-speed--core-web-vitals)
+[![Anti-AI Slop](https://img.shields.io/badge/Aesthetic-Anti--AI_Slop-FF5B61.svg?style=for-the-badge)](#-the-anti-slop-manifesto)
+[![Multi-Agent](https://img.shields.io/badge/Compatible-Antigravity_|_Claude_|_Codex_|_Cursor-00F0FF.svg?style=for-the-badge)](#-one-line-installation)
+
+[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 4 Flagship Skills](#-the-4-flagship-skills) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
 
 ---
 
 </div>
 
-## 🌐 Suite Overview
+## 💥 The Anti-Slop Manifesto
 
-Most AI coding agents produce repetitive, generic output: cliché 3-column layouts, bloated prompts that burn context tokens, unoptimized images causing layout shifts, robotic corporate prose, and basic security oversights.
+Most AI coding agents write code that works, but looks and reads like an uninspired template:
+- ❌ **Bloated Prompts**: Burning hundreds of tokens on polite conversational filler, vague adjectives, and redundant explanations.
+- ❌ **The 3-Column AI Cliché**: Centered headline over three lines, a gradient accent, and a generic row of three identical card boxes.
+- ❌ **Brittle Breakpoints**: Layouts that break on narrow viewports, cause horizontal scrollbars, or stretch to 3,000 pixels on wide displays.
+- ❌ **Performance Sluggishness**: Unoptimized images without reserved dimensions, causing massive Cumulative Layout Shifts (CLS) and sluggish LCP.
+- ❌ **Robotic AI Prose**: Fluffy marketing copy packed with *"delve"*, *"unlock your potential"*, *"game-changer"*, and *"in today's fast-paced digital world"*.
 
-**`vanzee-skills`** transforms your AI assistant (Google Antigravity, Claude Code, OpenAI Codex, Cursor, Windsurf) into a world-class senior design engineer, defensive security architect, performance specialist, and conversion copywriter.
+**`vanzee-skills` completely eradicates this.** It equips your AI model with strict architectural heuristics, tactile design tokens, defensive security gates, sub-second performance rules, and unmistakable human corporate authority.
+
+---
+
+## ⚡ The 4 Flagship Skills
 
 ```text
 vanzee-skills/
 ├── skills/
-│   ├── evankristanto/          # Prompt Compaction, Modern Bento/Aura UI, Security Shield, SEO & Email
-│   ├── universal-responsive/    # Container Queries, Fluid clamp(), Foldables to 4K Ultra-Wide
-│   ├── web-perf-optimizer/      # 100/100 Lighthouse, Sub-second LCP, Zero CLS, Sub-50ms INP
-│   └── conversion-copywriting/  # Anti-AI Voice Engine, B2B Enterprise Copy, Landing Page Blueprints
+│   ├── evankristanto/          # 💎 Flagship Web Craft, Bento/Aura UI, Security Shield, SEO & Email
+│   ├── universal-responsive/    # 📱 Multi-Device Layout Engine (Container Queries, clamp(), Foldable to 4K)
+│   ├── web-perf-optimizer/      # 🚀 Sub-Second LCP, Zero CLS, Sub-50ms INP, Next-Gen Asset Diet
+│   └── conversion-copywriting/  # 🎯 Anti-AI Human Voice, B2B Enterprise Copy, Objection Annihilation
 ```
 
 ---
 
-## 🚀 Installation
+### 💎 1. `evankristanto` &mdash; Flagship Web Craft & Systems Architecture
+> *The master blueprint: High-signal prompt engineering, tactile modern UI/UX, bulletproof defensive security, and growth marketing.*
 
-### Option 1: Automatic One-Line Install (Recommended)
+| Module | What It Delivers | Key Impact |
+|:-------|:-----------------|:-----------|
+| **Token Compaction** | Strips conversational fluff; converts business logic into schema-first TypeScript interfaces and cache-friendly delimiter blocks. | **Cuts 40%–70% of prompt token waste** |
+| **Tactile UI/UX** | Asymmetric Bento grids (24px curve, dual-depth elevation), Iridescent Aura ambient blur, sunken inputs, and spring-physics controls. | **Eradicates generic AI templates** |
+| **Dynamic Palette** | Dynamically adapts to ANY brand color using perceptual OKLCH color space (Cyber Dark, Fintech Neon, Sunset Aura, Clean Porcelain). | **Infinite brand adaptability** |
+| **Defensive Shield** | OWASP Top 10 checklist, strict CSP & HSTS headers, DOMPurify sanitization, IDOR session verification, and IP rate limiting. | **Zero-compromise web defense** |
+| **SEO, AEO & Email** | Machine-readable JSON-LD schemas, Perplexity/ChatGPT AI search extraction blocks, and responsive single-column HTML emails. | **Outlook & Gmail dark mode safe** |
 
-#### For Windows (PowerShell):
+---
+
+### 📱 2. `universal-responsive` &mdash; Intelligent Multi-Device Layout Engine
+> *A layout architecture that reflows with intent across 320px mobile screens, foldables, tablets, laptops, and 3840px 4K ultra-wides.*
+
+* **Component-First Container Queries (`@container`)**: Components adjust according to their parent column width, not the arbitrary viewport. A card in a 320px sidebar renders in compact mode even on an ultra-wide monitor.
+* **Fluid `clamp()` Mathematics**: Glides typography, gaps, and padding smoothly between 360px and 1440px viewports without abrupt, jarring breakpoint jumps.
+* **Touch vs. Pointer Modality**: Enforces a strict 48px minimum tap target for touchscreens and disables sticky `:hover` pseudo-classes on mobile.
+* **Hardware Notch & Island Insets**: Accommodates iPhone Dynamic Island and Android navigation bars using `env(safe-area-inset-*)`.
+* **Zero Horizontal Overflow**: Guaranteed 0px layout spill across all screen sizes using `overflow-x: clip`.
+
+---
+
+### 🚀 3. `web-perf-optimizer` &mdash; Ultra-Lightweight Speed & Core Web Vitals
+> *Guaranteed 100/100 Lighthouse performance, sub-second LCP, zero CLS, and sub-50ms INP.*
+
+* **Zero Cumulative Layout Shift (CLS = 0.00)**: Mandatory space reservation with CSS `aspect-ratio` and font-fallback metric overrides (`size-adjust`) to eliminate layout shifts.
+* **Sub-Second LCP (< 1.2s)**: High-priority AVIF/WebP image delivery, critical CSS inlining, and hero image preloading with `fetchpriority="high"`.
+* **Main-Thread Relief (INP < 50ms)**: Long-task chunking using `scheduler.yield()`, passive event listeners (`{ passive: true }`), and virtualized lists.
+* **CSS Containment**: Uses `content-visibility: auto` to skip layout and painting for off-screen sections until scrolled into view.
+
+---
+
+### 🎯 4. `conversion-copywriting` &mdash; Enterprise-Grade Copy & The Closer
+> *Persuasive, authoritative marketing prose that closes high-ticket enterprise deals and sounds unmistakably human.*
+
+* **The Anti-AI Human Voice Engine**: Permanently bans generic AI tropes (*"In today's fast-paced world"*, *"unlock your potential"*, *"delve"*, *"game-changer"*, *"testament to"*).
+* **The Specificity Equation**: Replaces vague corporate puffery with concrete mechanisms, cold numbers, and time constraints.
+* **Dynamic Cadence & Rhythm**: Breaks monotonous AI syntax by alternating punchy 3-word impacts with descriptive technical depth.
+* **Conversion Blueprints**: Complete copy architectures for SaaS landing pages, B2B proposals, 4-sentence cold emails to executives, and objection-annihilating pricing FAQs.
+
+---
+
+## 💻 One-Line Installation
+
+### For Windows (PowerShell):
 ```powershell
 # Install for Antigravity (Default)
 irm https://raw.githubusercontent.com/EVANKRISTANTO/vanzee-skills/main/install.ps1 | iex
 
-# Or install for all supported agents (Antigravity, Claude Code, Codex)
+# Or install across all installed agents (Antigravity, Claude Code, Codex)
 & { irm https://raw.githubusercontent.com/EVANKRISTANTO/vanzee-skills/main/install.ps1 } -Target all
 ```
 
-#### For macOS & Linux (Bash):
+### For macOS & Linux (Bash):
 ```bash
-# Clone and install locally
 git clone https://github.com/EVANKRISTANTO/vanzee-skills.git
 cd vanzee-skills
 ./install.sh all
 ```
 
----
-
-### Option 2: Manual Installation by Agent
-
 <details>
-<summary><b>Google Antigravity</b> (Global Installation)</summary>
+<summary><b>Manual Installation Instructions</b></summary>
 
+#### Google Antigravity
 Copy the folders from `skills/` directly to your global Antigravity customizations directory:
 ```bash
 # Windows
@@ -70,11 +127,8 @@ Copy-Item -Path "skills\*" -Destination "$HOME\.gemini\config\skills\" -Recurse 
 # Linux / macOS
 cp -R skills/* ~/.gemini/config/skills/
 ```
-</details>
 
-<details>
-<summary><b>Claude Code</b></summary>
-
+#### Claude Code
 ```bash
 # Windows
 Copy-Item -Path "skills\*" -Destination "$HOME\.claude\skills\" -Recurse -Force
@@ -82,21 +136,13 @@ Copy-Item -Path "skills\*" -Destination "$HOME\.claude\skills\" -Recurse -Force
 # Linux / macOS
 cp -R skills/* ~/.claude/skills/
 ```
-</details>
 
-<details>
-<summary><b>OpenAI Codex CLI</b></summary>
-
+#### OpenAI Codex CLI
 ```bash
-# Linux / macOS
 cp -R skills/* ~/.codex/skills/
 ```
-</details>
 
-<details>
-<summary><b>Cursor / Windsurf / Project Workspace</b></summary>
-
-Copy to your project's `.agents/skills/` or `.cursor/skills/` folder:
+#### Project Workspace (Cursor / Windsurf / Antigravity Local)
 ```bash
 mkdir -p .agents/skills
 cp -R skills/* .agents/skills/
@@ -105,92 +151,52 @@ cp -R skills/* .agents/skills/
 
 ---
 
-## 💎 The 4 Flagship Skills
+## 🎮 Interactive Prompt Playbook
 
-### 1. `evankristanto` &mdash; Flagship Web Craft & Systems Architecture
-> **The core engine: High-signal prompt engineering, modern tactile UI/UX, defensive web security, and growth marketing.**
+Once installed, your AI coding agent activates these skills automatically. Here are ready-to-copy prompts to see them in action:
 
-- **Token Compaction**: Cuts 40%–70% of prompt fluff by converting instructions into schema-first TypeScript interfaces and cache-friendly delimiter blocks.
-- **Modern UI/UX Design System**:
-  - **Tactile Bento Cards**: 24px radius, dual-layer depth (`box-shadow: 0 20px 40px -15px rgba(0,0,0,0.6)`), 1px subtle borders.
-  - **Dynamic Palette Matrix**: Automatically maps any brand color into harmonized, high-contrast OKLCH semantic tokens (Cyber Dark, Fintech Neon, Sunset Aura, Clean Porcelain, Emerald Wealth, Midnight Navy).
-  - **Controls & Micro-Interactions**: Tactile buttons with active scale physics (`0.97`), sunken inputs, pill switches, and circular conic dials.
-- **Defensive Security Shield**: Complete OWASP Top 10 checklist, IDOR prevention, DOMPurify HTML sanitization, strict CSP headers, and rate-limiting rules.
-- **Growth & Marketing**: Machine-readable JSON-LD schemas, AEO/GEO optimization for AI search engines, and bulletproof responsive single-column HTML emails (Outlook & Gmail dark mode tested).
-
----
-
-### 2. `universal-responsive` &mdash; Multi-Device Layout Engine
-> **A layout architecture that reflows seamlessly from 320px mobile screens to 3840px 4K ultra-wide monitors.**
-
-- **Container Queries (`@container`)**: Components adjust based on their parent container's allocated width, not the arbitrary viewport width. A card inside a 320px sidebar renders in compact mode even on an ultra-wide display.
-- **Fluid clamp() Mathematics**: Smoothly glides font sizes, line heights, and section padding from mobile to desktop without abrupt breakpoint jumps.
-- **Touch vs. Pointer Modality**: Enforces 48px tap targets and disables sticky hover pseudo-classes on touchscreen devices.
-- **Notch & Hardware Insets**: Native handling of iPhone Dynamic Island and Android navigation bars with `env(safe-area-inset-*)`.
-- **Zero Horizontal Overflow**: Guaranteed 0px horizontal layout spill using `overflow-x: clip`.
-
----
-
-### 3. `web-perf-optimizer` &mdash; Ultra-Lightweight Speed & Core Web Vitals
-> **Guaranteed 100/100 Lighthouse performance, sub-second LCP, zero CLS, and sub-50ms INP.**
-
-- **Zero Layout Shift (CLS = 0.00)**: Mandatory dimension reservation with CSS `aspect-ratio` and font-fallback metric overrides (`size-adjust`).
-- **Sub-Second LCP (< 1.2s)**: AVIF/WebP next-gen image serving, critical CSS inlining, and hero image preloading with `fetchpriority="high"`.
-- **Main-Thread Relief (INP < 50ms)**: Long-task chunking using `scheduler.yield()`, passive scroll event listeners, and virtualized lists.
-- **CSS Containment**: Uses `content-visibility: auto` to skip rendering off-screen sections until the user scrolls them into view.
-
----
-
-### 4. `conversion-copywriting` &mdash; Enterprise-Grade Marketing Copy
-> **Persuasive, authoritative marketing prose that closes enterprise deals and sounds unmistakably human.**
-
-- **The Anti-AI Human Voice Engine**: Permanently bans generic AI tropes (*"In today's fast-paced world"*, *"unlock your potential"*, *"delve"*, *"game-changer"*, *"testament to"*).
-- **The Specificity Equation**: Replaces vague corporate puffery with concrete mechanisms, measurable numbers, and time constraints.
-- **Cadence & Rhythm**: Breaks monotone AI syntax by alternating punchy 3-word statements with detailed technical explanations.
-- **Conversion Blueprints**: Complete copy architectures for SaaS landing pages, B2B proposals, 4-sentence cold emails to executives, and objection-annihilating pricing FAQs.
-
----
-
-## 🎯 Interactive Usage Recipes
-
-Once installed, your AI agent automatically activates these skills based on your natural language requests:
-
-### Example 1: Build a Modern Tactile Dashboard
+```carousel
+<!-- slide -->
+### 💎 Modern Tactile Dashboard
 ```text
-"Create a modern financial analytics dashboard using the evankristanto skill.
-Use an emerald-green theme with asymmetrical bento cards, circular sleep/volume dials,
-and ensure the layout is anti-slop with Lucide icons."
+"Build a financial portfolio dashboard using the evankristanto skill.
+Use an obsidian-dark theme with electric cyan accents, asymmetric bento cards,
+circular conic progress dials, tabular-num typography, and Lucide icons.
+Ensure the layout is completely anti-slop."
 ```
-
-### Example 2: Optimize a Prompt for Token Economy
+<!-- slide -->
+### ⚡ High-Density Prompt Compaction
 ```text
-"Use evankristanto prompt optimization to compress this 400-word prompt into a high-density,
-schema-driven prompt that saves tokens and eliminates conversational filler."
+"Apply evankristanto prompt optimization to this 300-word prompt draft.
+Strip conversational fluff, eliminate polite preambles, convert the business logic
+into a strict TypeScript schema, and produce a cache-friendly, token-efficient prompt."
 ```
-
-### Example 3: Full Multi-Device Responsive Refactor
+<!-- slide -->
+### 📱 Zero-Break Multi-Device Layout
 ```text
-"Apply universal-responsive to this landing page. Convert the pricing grid to use
-container queries, replace fixed font sizes with clamp() fluid math, and ensure 48px
-tap targets on mobile."
+"Refactor our landing page using universal-responsive. Implement container queries
+on all pricing cards, replace static padding with fluid clamp() formulas, ensure
+a 48px touch target on mobile, and bound the ultra-wide layout with overflow-x: clip."
 ```
-
-### Example 4: Core Web Vitals Performance Audit
+<!-- slide -->
+### 🚀 Core Web Vitals 100/100 Audit
 ```text
-"Audit this Next.js page using web-perf-optimizer. Fix our LCP, eliminate layout shifts (CLS),
-and implement content-visibility for our heavy table components."
+"Audit our web application using web-perf-optimizer. Fix our Largest Contentful Paint (LCP),
+guarantee CLS = 0.00 by reserving aspect ratios, optimize our font loading,
+and apply content-visibility to all below-the-fold components."
 ```
-
-### Example 5: Enterprise Landing Page Copy
+<!-- slide -->
+### 🎯 B2B High-Ticket Pitch & Copy
 ```text
-"Write the hero section and value proposition for our enterprise database monitoring tool
-using conversion-copywriting. Make it sound like a confident senior engineer speaking to a CTO,
-with zero AI buzzwords."
+"Write the hero section and value proposition for our enterprise cloud security platform
+using conversion-copywriting. Make it sound like a seasoned Principal Architect speaking directly
+to a CTO, with zero AI clichés and bulletproof social proof framing."
+```
 ```
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repository Blueprint
 
 ```text
 vanzee-skills/
@@ -198,28 +204,28 @@ vanzee-skills/
 │   ├── evankristanto/
 │   │   ├── SKILL.md
 │   │   └── references/
-│   │       ├── prompt-optimization.md
-│   │       ├── ui-design-tokens.md
-│   │       ├── security-hardening.md
-│   │       └── marketing-seo-email.md
+│   │       ├── prompt-optimization.md       # Token compression heuristics & schema prompting
+│   │       ├── ui-design-tokens.md          # Bento geometry, OKLCH palette matrix & component tokens
+│   │       ├── security-hardening.md        # OWASP Top 10 checklist & defensive security runbook
+│   │       └── marketing-seo-email.md       # AEO/GEO schemas & bulletproof HTML email templates
 │   ├── universal-responsive/
 │   │   ├── SKILL.md
 │   │   └── references/
-│   │       └── responsive-patterns.md
+│   │       └── responsive-patterns.md       # Container queries, clamp() math & safe-area insets
 │   ├── web-perf-optimizer/
 │   │   ├── SKILL.md
 │   │   └── references/
-│   │       └── performance-audit-checklist.md
+│   │       └── performance-audit-checklist.md # Core Web Vitals, asset diet & main-thread relief
 │   └── conversion-copywriting/
 │       ├── SKILL.md
 │       └── references/
-│           ├── anti-ai-voice-engine.md
-│           ├── landing-page-blueprints.md
-│           └── b2b-sales-and-pitches.md
-├── install.ps1
-├── install.sh
-├── LICENSE
-└── README.md
+│           ├── anti-ai-voice-engine.md      # The anti-slop human voice dictionary & cadence rules
+│           ├── landing-page-blueprints.md   # High-converting SaaS, B2B & agency copy frameworks
+│           └── b2b-sales-and-pitches.md     # 4-sentence cold executive outreach & proposal scripts
+├── install.ps1                              # Automated installer for Windows environments
+├── install.sh                               # Automated installer for macOS & Linux
+├── LICENSE                                  # MIT License
+└── README.md                                # Master documentation
 ```
 
 ---
@@ -237,6 +243,6 @@ Contributions, feature requests, and new aesthetic archetypes are welcome!
 
 ## 📄 License
 
-Distributed under the **MIT License**. See [`LICENSE`](./LICENSE) for more information.
+Distributed under the **MIT License**. See [`LICENSE`](./LICENSE) for full details.
 
-Developed with passion by **[Evan Kristanto](https://github.com/EVANKRISTANTO)**.
+Crafted with obsession by **[Evan Kristanto](https://github.com/EVANKRISTANTO)** (Vanzee).

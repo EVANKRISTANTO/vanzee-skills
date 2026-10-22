@@ -102,13 +102,13 @@ echo -e "${BOLD}${WHITE}╰─────────────────�
 
 # --- Step 2: Interactive Skill Selection ---
 echo -e "${BOLD}${WHITE}╭── [2/4] Choose Installation Mode ────────────────────────────────────╮${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${GREEN}[A] Full Flagship Suite (All 11 Skills)                  [DEFAULT]${RESET}  ${BOLD}${WHITE}│${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[1] Web & UI/UX Craft Pack     (evankristanto, responsive, perf)    ${RESET} ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${GREEN}[A] Full Flagship Suite (All 12 Skills)                  [DEFAULT]${RESET}  ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[1] Web & Fullstack Pack      (evankristanto, fullstack, perf, resp) ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[2] Growth & Marketing Pack   (copywriting, caption, zero-ai)      ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[3] Deep Reasoning & Prompts  (deep-think, risk, prompt-architect) ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[4] Academic & Student Pack   (academic-support, zero-ai)          ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[5] Enterprise & Business Pack(business-growth, risk, copywriting) ${RESET} ${BOLD}${WHITE}│${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${YELLOW}[C] Custom Selection          (Pilih nomor skill manual 1-11)      ${RESET} ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${YELLOW}[C] Custom Selection          (Pilih nomor skill manual 1-12)      ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}╰───────────────────────────────────────────────────────────────────────╯${RESET}\n"
 
 ALL_SKILL_NAMES=(
@@ -123,6 +123,7 @@ ALL_SKILL_NAMES=(
   "academic-student-support"
   "prompt-architect"
   "business-growth-strategist"
+  "fullstack-developer"
 )
 
 read -r -p "Pilih preset yang mau di-install [A/1/2/3/4/5/C] (Tekan ENTER untuk Semua): " USER_CHOICE || USER_CHOICE="A"
@@ -132,8 +133,8 @@ CHOSEN_SKILLS=()
 
 case "${USER_CHOICE^^}" in
   1)
-    CHOSEN_SKILLS=("evankristanto" "universal-responsive" "web-perf-optimizer")
-    echo -e "\n${CYAN}➜ Mode Dipilih: [1] Web & UI/UX Craft Pack${RESET}"
+    CHOSEN_SKILLS=("evankristanto" "fullstack-developer" "universal-responsive" "web-perf-optimizer")
+    echo -e "\n${CYAN}➜ Mode Dipilih: [1] Web & Fullstack Engineering Pack${RESET}"
     ;;
   2)
     CHOSEN_SKILLS=("conversion-copywriting" "social-caption-maker" "zero-ai-detector")
@@ -164,6 +165,7 @@ case "${USER_CHOICE^^}" in
     echo -e "${YELLOW}│${RESET}  [9] [EDU] academic-student-support - Dual-Output Mastery, 6 Papers"
     echo -e "${YELLOW}│${RESET}  [10] [PRM] prompt-architect      - Meta-Prompt Generator, Idea Expander"
     echo -e "${YELLOW}│${RESET}  [11] [BIZ] business-growth-strategist - Unit Economics, Licensing (OSS/PT), Profit"
+    echo -e "${YELLOW}│${RESET}  [12] [FSK] fullstack-developer   - Frontend RSC, Clean API, Postgres & Docker"
     echo -e "${YELLOW}╰───────────────────────────────────────────────────────────────────────╯${RESET}\n"
     read -r -p "Ketik nomor skill yang mau dipasang (contoh: 1 3 5 8): " CUSTOM_NUMS || CUSTOM_NUMS=""
     if [ -z "$CUSTOM_NUMS" ]; then
@@ -180,7 +182,7 @@ case "${USER_CHOICE^^}" in
     ;;
   *)
     CHOSEN_SKILLS=("${ALL_SKILL_NAMES[@]}")
-    echo -e "\n${GREEN}➜ Mode Dipilih: [A] Full Flagship Suite (Semua 11 Skill)${RESET}"
+    echo -e "\n${GREEN}➜ Mode Dipilih: [A] Full Flagship Suite (Semua 12 Skill)${RESET}"
     ;;
 esac
 
@@ -282,6 +284,7 @@ for sn in "${CHOSEN_SKILLS[@]}"; do
     academic-student-support)echo -e "  ${PURPLE}• Tugas Kuliah:${RESET}   ${DIM}\"Bantu buat makalah S1 dan panduan ujian pakai academic-student-support\"${RESET}" ;;
     prompt-architect)        echo -e "  ${PURPLE}• Prompt Gen:${RESET}     ${DIM}\"Bagusin dan kembangkan ide prompt ini pakai prompt-architect\"${RESET}" ;;
     business-growth-strategist)echo -e "  ${PURPLE}• Business Adv:${RESET}   ${DIM}\"Analisis kelayakan bisnis, margin profit, dan izin OSS pakai business-growth-strategist\"${RESET}" ;;
+    fullstack-developer)       echo -e "  ${PURPLE}• Fullstack:${RESET}      ${DIM}\"Bangun REST API / tRPC dan frontend Next.js pakai fullstack-developer\"${RESET}" ;;
   esac
 done
 

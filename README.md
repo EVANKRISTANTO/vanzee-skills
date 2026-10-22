@@ -21,7 +21,7 @@
 [![Anti-AI Slop](https://img.shields.io/badge/Aesthetic-Anti--AI_Slop-FF5B61.svg?style=for-the-badge)](#-the-anti-slop-manifesto)
 [![Multi-Agent](https://img.shields.io/badge/Compatible-Antigravity_|_Claude_|_Codex_|_Cursor-00F0FF.svg?style=for-the-badge)](#-one-line-installation)
 
-[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 11 Flagship Skills](#-the-11-flagship-skills) • [The Rules Suite](#-the-rules-suite) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
+[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 12 Flagship Skills](#-the-12-flagship-skills) • [The Rules Suite](#-the-rules-suite) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
 
 ---
 
@@ -40,12 +40,13 @@ Most AI coding agents write code that works, but looks and reads like an uninspi
 
 ---
 
-## ⚡ The 11 Flagship Skills
+## ⚡ The 12 Flagship Skills
 
 ```text
 vanzee-skills/
 ├── skills/
 │   ├── evankristanto/          # 💎 Flagship Web Craft, Bento/Aura UI, Security Shield, SEO & Email
+│   ├── fullstack-developer/    # ⚡ End-to-End Systems, Next.js RSC, Clean API, Postgres & Docker
 │   ├── universal-responsive/    # 📱 Multi-Device Layout Engine (Container Queries, clamp(), Foldable to 4K)
 │   ├── web-perf-optimizer/      # 🚀 Sub-Second LCP, Zero CLS, Sub-50ms INP, Next-Gen Asset Diet
 │   ├── conversion-copywriting/  # 🎯 Anti-AI Human Voice, B2B Enterprise Copy, Objection Annihilation
@@ -172,6 +173,17 @@ vanzee-skills/
 * **Corporate Tax Structuring**: Navigates PPh Final UMKM 0.5% (PP 55/2022), PKP threshold (Rp 4.8M), Faktur Pajak PPN 11%, and withholding taxes (PPh 21/23/4 ayat 2).
 * **The Best-Option Decision Matrix**: Compares competing growth strategies using weighted multi-variable scoring (Expected Profit, Capital Needs, Execution Speed, Legal Risk, Defensibility).
 * **Founders' Governance**: Protects enterprise equity with 4-year vesting schedules, 1-year cliffs, Bad Leaver repurchase clauses, and IP assignment contracts.
+
+---
+
+### ⚡ 12. `fullstack-developer` &mdash; Senior Fullstack & Systems Architecture
+> *Architects and builds production-grade, end-to-end web applications with type-safe contracts, Clean Architecture, relational databases, and multi-stage containerization.*
+
+* **Server Component Architecture (RSC)**: Master of Next.js App Router, push `"use client"` to the interactive leaves, stream HTML with Suspense, and eliminate client data waterfalls.
+* **Resilient State Management**: Strict division between Server State (TanStack Query / SWR with optimistic mutations and query key factories) and UI state (atomic Zustand stores).
+* **Clean Architecture & Scalable APIs**: Layered modularity (Controllers -> Use Cases -> Repositories), semantic RESTful endpoints with cursor pagination, type-safe tRPC, and BullMQ background workers with retry backoffs.
+* **Database Engineering & Concurrency**: PostgreSQL schema design (3NF, UUIDv7 primary keys, composite B-Tree indexes, partial indexes), atomic updates, row-level locks (`SELECT FOR UPDATE`), and Redis Cache-Aside.
+* **DevOps & Security Hardening**: Non-root multi-stage Dockerfiles, silent JWT refresh token rotation with HttpOnly cookies, RBAC authorization, and automated testing pyramid (Vitest + Playwright).
 
 ---
 
@@ -348,6 +360,15 @@ Bantu rekomendasikan:
 2. Analisis unit economics (target CAC, LTV, pricing 3-tier) agar net margin di atas 25%.
 3. Kepatuhan pajak awal (PPh Final 0.5% vs Normal) dan klausul wajib Founders' Agreement."
 ```
+<!-- slide -->
+### ⚡ Fullstack Feature Implementation
+```text
+"Rancang dan bangun fitur billing & subscription end-to-end pakai skill fullstack-developer.
+1. Frontend: React Server Components dengan TanStack Query untuk mutasi optimis, dan Zod form validation.
+2. Backend: Clean Architecture use case dengan Stripe webhook handler dan idempotency keys.
+3. Database: Skema PostgreSQL Drizzle dengan UUIDv7, indeks komposit, dan row-level locking.
+4. Testing: Buat 1 unit test Vitest untuk kalkulasi diskon dan 1 integration test API."
+```
 ````
 
 ---
@@ -364,6 +385,13 @@ vanzee-skills/
 │   │       ├── ui-design-tokens.md          # Bento geometry, OKLCH palette matrix & component tokens
 │   │       ├── security-hardening.md        # OWASP Top 10 checklist & defensive security runbook
 │   │       └── marketing-seo-email.md       # AEO/GEO schemas & bulletproof HTML email templates
+│   ├── fullstack-developer/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── frontend-architecture-and-state.md    # RSC vs Client, TanStack Query, Zustand & Zod
+│   │       ├── backend-api-and-clean-architecture.md # Clean architecture, REST/tRPC, BullMQ queues
+│   │       ├── database-design-and-caching.md        # Postgres, UUIDv7, indexing, ACID & Redis cache
+│   │       └── devops-security-and-testing.md        # Multi-stage Docker, JWT rotation & Vitest
 │   ├── universal-responsive/
 │   │   ├── SKILL.md
 │   │   └── references/

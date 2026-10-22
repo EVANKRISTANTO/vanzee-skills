@@ -60,17 +60,18 @@ $AllSkills = @(
     @{ Id = 8; Name = 'zero-ai-detector';        Desc = '0% Turnitin/GPTZero Detection Bypass, Burstiness Math'; Tag = '0AI' },
     @{ Id = 9; Name = 'academic-student-support';Desc = 'Dual-Output Mastery, 6 College Papers, Oral Defense Prep'; Tag = 'EDU' },
     @{ Id = 10; Name = 'prompt-architect';       Desc = 'Meta-Prompt Generator, Idea Expander & Skills Mapper'; Tag = 'PRM' },
-    @{ Id = 11; Name = 'business-growth-strategist'; Desc = 'Unit Economics, Licensing (OSS/NIB/PT), Profit Engine'; Tag = 'BIZ' }
+    @{ Id = 11; Name = 'business-growth-strategist'; Desc = 'Unit Economics, Licensing (OSS/NIB/PT), Profit Engine'; Tag = 'BIZ' },
+    @{ Id = 12; Name = 'fullstack-developer';    Desc = 'Frontend RSC, Clean Architecture API, Postgres & Docker'; Tag = 'FSK' }
 )
 
 Write-Host "+-- [2/4] Choose Installation Mode ------------------------------------+" -ForegroundColor White
-Write-Host "|  [A] Full Flagship Suite (All 11 Skills)                  [DEFAULT]  |" -ForegroundColor Green
-Write-Host "|  [1] Web & UI/UX Craft Pack     (evankristanto, responsive, perf)     |" -ForegroundColor Cyan
+Write-Host "|  [A] Full Flagship Suite (All 12 Skills)                  [DEFAULT]  |" -ForegroundColor Green
+Write-Host "|  [1] Web & Fullstack Pack      (evankristanto, fullstack, perf, resp) |" -ForegroundColor Cyan
 Write-Host "|  [2] Growth & Marketing Pack   (copywriting, caption, zero-ai)       |" -ForegroundColor Cyan
 Write-Host "|  [3] Deep Reasoning & Prompts  (deep-think, risk, prompt-architect)  |" -ForegroundColor Cyan
 Write-Host "|  [4] Academic & Student Pack   (academic-support, zero-ai)           |" -ForegroundColor Cyan
 Write-Host "|  [5] Enterprise & Business Pack(business-growth, risk, copywriting)   |" -ForegroundColor Cyan
-Write-Host "|  [C] Custom Selection          (Pilih nomor skill manual 1-11)       |" -ForegroundColor Yellow
+Write-Host "|  [C] Custom Selection          (Pilih nomor skill manual 1-12)       |" -ForegroundColor Yellow
 Write-Host "+-----------------------------------------------------------------------+" -ForegroundColor White
 
 $choice = $Preset
@@ -84,8 +85,8 @@ $chosenSkillNames = @()
 
 switch ($choice.ToUpper().Trim()) {
     '1' {
-        $chosenSkillNames = @('evankristanto', 'universal-responsive', 'web-perf-optimizer')
-        Write-Host "`n> Mode Dipilih: [1] Web & UI/UX Craft Pack" -ForegroundColor Cyan
+        $chosenSkillNames = @('evankristanto', 'fullstack-developer', 'universal-responsive', 'web-perf-optimizer')
+        Write-Host "`n> Mode Dipilih: [1] Web & Fullstack Engineering Pack" -ForegroundColor Cyan
     }
     '2' {
         $chosenSkillNames = @('conversion-copywriting', 'social-caption-maker', 'zero-ai-detector')
@@ -131,7 +132,7 @@ switch ($choice.ToUpper().Trim()) {
     }
     Default {
         $chosenSkillNames = $AllSkills | ForEach-Object { $_.Name }
-        Write-Host "`n> Mode Dipilih: [A] Full Flagship Suite (Semua 11 Skill)" -ForegroundColor Green
+        Write-Host "`n> Mode Dipilih: [A] Full Flagship Suite (Semua 12 Skill)" -ForegroundColor Green
     }
 }
 
@@ -227,6 +228,7 @@ foreach ($sn in $chosenSkillNames) {
         'academic-student-support'{ Write-Host "  * Tugas Kuliah:  'Bantu buat makalah S1 dan panduan ujian pakai academic-student-support'" -ForegroundColor Magenta }
         'prompt-architect'        { Write-Host "  * Prompt Gen:    'Bagusin dan kembangkan ide prompt ini pakai prompt-architect'" -ForegroundColor Magenta }
         'business-growth-strategist'{ Write-Host "  * Business Adv:  'Analisis kelayakan bisnis, margin profit, dan izin OSS pakai business-growth-strategist'" -ForegroundColor Magenta }
+        'fullstack-developer'     { Write-Host "  * Fullstack:     'Bangun REST API / tRPC dan frontend Next.js pakai fullstack-developer'" -ForegroundColor Magenta }
     }
 }
 Write-Host ""

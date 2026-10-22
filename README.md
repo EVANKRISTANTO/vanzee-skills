@@ -21,7 +21,7 @@
 [![Anti-AI Slop](https://img.shields.io/badge/Aesthetic-Anti--AI_Slop-FF5B61.svg?style=for-the-badge)](#-the-anti-slop-manifesto)
 [![Multi-Agent](https://img.shields.io/badge/Compatible-Antigravity_|_Claude_|_Codex_|_Cursor-00F0FF.svg?style=for-the-badge)](#-one-line-installation)
 
-[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 11 Flagship Skills](#-the-11-flagship-skills) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
+[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 11 Flagship Skills](#-the-11-flagship-skills) • [The Rules Suite](#-the-rules-suite) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
 
 ---
 
@@ -229,6 +229,31 @@ cp -R skills/* .agents/skills/
 
 ---
 
+## 🛡️ The Rules Suite (Always-On Agent Constraints)
+
+While **Skills** provide on-demand procedures and deep domain knowledge, **Rules** enforce non-negotiable architectural standards, design tokens, security boundaries, and copywriting filters across **every single conversation turn**.
+
+```text
+vanzee-skills/
+├── rules/
+│   ├── 01-anti-slop-web-craft.md     # Bento UI, 24px curves, OKLCH, clamp() math, Lighthouse 100, OWASP Top 10
+│   ├── 02-anti-ai-voice.md           # Forbidden N-Gram Blacklist, burstiness cadence, concrete specificity
+│   ├── 03-deep-reasoning-and-risk.md # Metacognitive pause, 5x5 severity matrix, pre-mortem failure mode analysis
+│   └── 04-business-rigor.md          # Unit economics (CAC/LTV), OSS-RBA licensing, tax PP 55/2022, Best-Option matrix
+├── AGENTS.md                         # Universal agent instructions (Antigravity, Cursor, Windsurf)
+├── GEMINI.md                         # Antigravity project-level rules
+├── CLAUDE.md                         # Claude Code project guidelines
+└── .cursorrules                      # Cursor IDE system instructions
+```
+
+### Why Rules + Skills Win:
+1. **Never Forgets Aesthetic Quality**: The AI won't default to generic 3-card layouts or flat purple buttons, even without mentioning a skill.
+2. **Permanent AI Slop Eraser**: Words like *"delve"*, *"testament"*, and *"in today's fast-paced world"* are actively blocked at the system prompt layer.
+3. **Safety & Defensive Gates**: Unsanitized HTML rendering and raw SQL string concatenations are forbidden before code is generated.
+4. **Instant Multi-Agent Deployment**: Shipped as universal standards (`AGENTS.md`, `CLAUDE.md`, `.cursorrules`, `GEMINI.md`) for zero-friction cross-tool compatibility.
+
+---
+
 ## 🎮 Interactive Prompt Playbook
 
 Once installed, your AI coding agent activates these skills automatically. Here are ready-to-copy prompts to see them in action:
@@ -384,10 +409,20 @@ vanzee-skills/
 │           ├── financial-engineering-and-unit-economics.md # CAC/LTV, CCC, burn rate, pricing power & 3-case models
 │           ├── legal-licensing-and-compliance.md           # PT/CV, OSS-RBA, KBLI, HKI, Halal, BPOM, Tax PP 55/2022
 │           └── growth-strategy-and-profit-maximization.md   # Best-Option matrix, GTM, moats, bootstrapping vs VC
-├── install.ps1                              # Automated installer for Windows environments
-├── install.sh                               # Automated installer for macOS & Linux
-├── LICENSE                                  # MIT License
-└── README.md                                # Master documentation
+├── rules/
+│   ├── 01-anti-slop-web-craft.md                # Modern Bento UI, clamp() math, Core Web Vitals & OWASP Top 10
+│   ├── 02-anti-ai-voice.md                      # Banned AI N-grams, dynamic burstiness & high perplexity
+│   ├── 03-deep-reasoning-and-risk.md            # Metacognitive pause, 5x5 severity matrix & pre-mortems
+│   └── 04-business-rigor.md                     # Unit economics, OSS-RBA licensing, tax & trade-off matrices
+├── .cursorrules                                 # System prompt & constraints for Cursor IDE
+├── AGENTS.md                                    # Universal agent instructions (Antigravity, Cursor, Windsurf)
+├── CLAUDE.md                                    # Project & conversational rules for Claude Code
+├── GEMINI.md                                    # Antigravity project-level rules
+├── install.bat                                  # One-click Windows CMD launcher
+├── install.ps1                                  # Interactive installer for Windows PowerShell
+├── install.sh                                   # Interactive installer for macOS & Linux
+├── LICENSE                                      # MIT License
+└── README.md                                    # Master documentation
 ```
 
 ---

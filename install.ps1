@@ -190,6 +190,18 @@ foreach ($dest in $Destinations) {
             $totalInstalled++
         }
     }
+
+    # Deploy Modular Rules
+    $rulesSrc = Join-Path (Split-Path $SkillsSrc -Parent) 'rules'
+    if (Test-Path $rulesSrc) {
+        $parentConfig = Split-Path $dest -Parent
+        $targetRulesDir = Join-Path $parentConfig 'rules'
+        if (-not (Test-Path $targetRulesDir)) {
+            New-Item -ItemType Directory -Path $targetRulesDir -Force | Out-Null
+        }
+        Copy-Item -Path (Join-Path $rulesSrc '*') -Destination $targetRulesDir -Recurse -Force
+        Write-Host "|    [OK] Installed Vanzee Modular Rules Suite" -ForegroundColor Cyan
+    }
 }
 Write-Host "+-----------------------------------------------------------------------+" -ForegroundColor White
 Write-Host ""

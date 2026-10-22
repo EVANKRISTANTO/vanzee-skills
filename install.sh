@@ -241,6 +241,16 @@ for dest in "${DESTINATIONS[@]}"; do
       ((TOTAL_INSTALLED++)) || true
     fi
   done
+
+  # Deploy Modular Rules
+  RULES_SRC="$(dirname "$SKILLS_SRC")/rules"
+  if [ -d "$RULES_SRC" ]; then
+    PARENT_CONFIG="$(dirname "$dest")"
+    TARGET_RULES_DIR="$PARENT_CONFIG/rules"
+    mkdir -p "$TARGET_RULES_DIR"
+    cp -R "$RULES_SRC"/* "$TARGET_RULES_DIR/"
+    echo -e "${BOLD}${WHITE}│${RESET}    ${CYAN}✔${RESET} Installed ${BOLD}Vanzee Modular Rules Suite${RESET}"
+  fi
 done
 
 echo -e "${BOLD}${WHITE}╰───────────────────────────────────────────────────────────────────────╯${RESET}\n"

@@ -58,16 +58,17 @@ $AllSkills = @(
     @{ Id = 6; Name = 'risk-management';         Desc = '5x5 Matrix, Pre-Mortem, Zero-Downtime Rollbacks'; Tag = 'RSK' },
     @{ Id = 7; Name = 'deep-think-planner';      Desc = 'Metacognitive First-Principles, Multi-Path Planning'; Tag = 'THK' },
     @{ Id = 8; Name = 'zero-ai-detector';        Desc = '0% Turnitin/GPTZero Detection Bypass, Burstiness Math'; Tag = '0AI' },
-    @{ Id = 9; Name = 'academic-student-support';Desc = 'Dual-Output Mastery, 6 College Papers, Oral Defense Prep'; Tag = 'EDU' }
+    @{ Id = 9; Name = 'academic-student-support';Desc = 'Dual-Output Mastery, 6 College Papers, Oral Defense Prep'; Tag = 'EDU' },
+    @{ Id = 10; Name = 'prompt-architect';       Desc = 'Meta-Prompt Generator, Idea Expander & Skills Mapper'; Tag = 'PRM' }
 )
 
 Write-Host "+-- [2/4] Choose Installation Mode ------------------------------------+" -ForegroundColor White
-Write-Host "|  [A] Full Flagship Suite (All 9 Skills)                   [DEFAULT]  |" -ForegroundColor Green
+Write-Host "|  [A] Full Flagship Suite (All 10 Skills)                  [DEFAULT]  |" -ForegroundColor Green
 Write-Host "|  [1] Web & UI/UX Craft Pack     (evankristanto, responsive, perf)     |" -ForegroundColor Cyan
 Write-Host "|  [2] Growth & Marketing Pack   (copywriting, caption, zero-ai)       |" -ForegroundColor Cyan
-Write-Host "|  [3] Deep Reasoning & Safety   (deep-think, risk-management)         |" -ForegroundColor Cyan
+Write-Host "|  [3] Deep Reasoning & Prompts  (deep-think, risk, prompt-architect)  |" -ForegroundColor Cyan
 Write-Host "|  [4] Academic & Student Pack   (academic-support, zero-ai)           |" -ForegroundColor Cyan
-Write-Host "|  [C] Custom Selection          (Pilih nomor skill manual)            |" -ForegroundColor Yellow
+Write-Host "|  [C] Custom Selection          (Pilih nomor skill manual 1-10)       |" -ForegroundColor Yellow
 Write-Host "+-----------------------------------------------------------------------+" -ForegroundColor White
 
 $choice = $Preset
@@ -89,8 +90,8 @@ switch ($choice.ToUpper().Trim()) {
         Write-Host "`n> Mode Dipilih: [2] Growth & Marketing Pack" -ForegroundColor Cyan
     }
     '3' {
-        $chosenSkillNames = @('deep-think-planner', 'risk-management')
-        Write-Host "`n> Mode Dipilih: [3] Deep Reasoning & Safety Pack" -ForegroundColor Cyan
+        $chosenSkillNames = @('deep-think-planner', 'risk-management', 'prompt-architect')
+        Write-Host "`n> Mode Dipilih: [3] Deep Reasoning & Prompt Engine" -ForegroundColor Cyan
     }
     '4' {
         $chosenSkillNames = @('academic-student-support', 'zero-ai-detector')
@@ -206,6 +207,7 @@ foreach ($sn in $chosenSkillNames) {
         'deep-think-planner'      { Write-Host "  * Deep Think:    'Pikirkan dulu arsitektur terbaik pakai deep-think-planner'" -ForegroundColor Magenta }
         'zero-ai-detector'        { Write-Host "  * Stealth AI:    'Humanize artikel ini biar skor AI 0% pakai zero-ai-detector'" -ForegroundColor Magenta }
         'academic-student-support'{ Write-Host "  * Tugas Kuliah:  'Bantu buat makalah S1 dan panduan ujian pakai academic-student-support'" -ForegroundColor Magenta }
+        'prompt-architect'        { Write-Host "  * Prompt Gen:    'Bagusin dan kembangkan ide prompt ini pakai prompt-architect'" -ForegroundColor Magenta }
     }
 }
 Write-Host ""

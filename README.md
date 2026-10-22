@@ -21,7 +21,7 @@
 [![Anti-AI Slop](https://img.shields.io/badge/Aesthetic-Anti--AI_Slop-FF5B61.svg?style=for-the-badge)](#-the-anti-slop-manifesto)
 [![Multi-Agent](https://img.shields.io/badge/Compatible-Antigravity_|_Claude_|_Codex_|_Cursor-00F0FF.svg?style=for-the-badge)](#-one-line-installation)
 
-[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 4 Flagship Skills](#-the-4-flagship-skills) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
+[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 10 Flagship Skills](#-the-10-flagship-skills) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
 
 ---
 
@@ -40,7 +40,7 @@ Most AI coding agents write code that works, but looks and reads like an uninspi
 
 ---
 
-## ⚡ The 9 Flagship Skills
+## ⚡ The 10 Flagship Skills
 
 ```text
 vanzee-skills/
@@ -53,7 +53,8 @@ vanzee-skills/
 │   ├── risk-management/         # 🛡️ Proactive Risk Forecasting, 5x5 Matrix, Pre-Mortem & Rollback
 │   ├── deep-think-planner/      # 🧠 Metacognitive Reasoning, First-Principles Analysis & Multi-Path Planning
 │   ├── zero-ai-detector/        # 👻 0% AI Detection Bypass (Turnitin/GPTZero), Burstiness & Perplexity
-│   └── academic-student-support/# 🎓 Dual-Output Academic Mastery (TK to S3, 6 College Papers, Oral Defense)
+│   ├── academic-student-support/# 🎓 Dual-Output Academic Mastery (TK to S3, 6 College Papers, Oral Defense)
+│   └── prompt-architect/        # 📐 Meta-Prompt Generator, Ideation Expander & Skills Auto-Mapper
 ```
 
 ---
@@ -149,6 +150,16 @@ vanzee-skills/
 * **6 Major Academic Deliverables**: Makalah/Paper ilmiah, Laporan praktikum lab, Review jurnal ilmiah (SINTA/Scopus), Studi kasus, Slide deck presentasi (dengan *Speaker Notes* naskah ucapan), dan Skripsi/Tesis/Disertasi.
 * **Full Pedagogical Spectrum**: Tailors terminology and depth across PAUD/TK, SD (analogi konkret), SMP, SMA (analisis kritis), hingga Pascasarjana S1–S3 (metodologi valid, gap riset, dan *novelty*).
 * **Defense Simulator**: Equips students with smart answers to the 3 hardest questions professors and teachers ask during seminars.
+
+---
+
+### 📐 10. `prompt-architect` &mdash; Meta-Prompt Generator, Ideation Expander & Skills Auto-Mapper
+> *Transforms raw, one-line user prompts into battle-tested, crystal-clear agent specifications with proactive feature expansion and automated skills injection.*
+
+* **Deep Intent Deconstruction**: Dissects raw prompts into core business goals, target user personas, technical constraints, and silent failure modes before generating anything.
+* **Proactive Ideation Expansion**: Generates 2–3 high-value feature recommendations that 95% of users forget to specify (security guardrails, edge-case fallbacks, analytics, or UI polish).
+* **Automated Skills & Rules Mapping**: Inspects the user's available skill library (`evankristanto`, `universal-responsive`, `web-perf-optimizer`, `conversion-copywriting`, `risk-management`, `deep-think-planner`, `zero-ai-detector`, etc.) and automatically embeds them into the prompt execution directive.
+* **Strict Anti-Slop Meta-Prompts**: Eliminates polite AI filler, conversational fluff, and generic buzzwords. Outputs clean, schema-driven markdown prompts with explicit deny-lists and verification criteria.
 
 ---
 
@@ -283,7 +294,15 @@ tingkatkan perplexity dengan istilah riil, dan buang semua kata klise AI seperti
 Buat Bagian 1: Makalah lengkap standar akademik S1 dengan rujukan APA 7th, dan Bagian 2: Cheatsheet penguasaan
 materi 3 menit plus simulasi 3 pertanyaan kritis dosen penguji dan kunci jawabannya."
 ```
+<!-- slide -->
+### 📐 Meta-Prompt Generation & Ideation Expansion
+```text
+"Kembangkan ide prompt ini pakai prompt-architect:
+'Bikin landing page SaaS AI copywriter minimalis'.
+Tolong bedah dulu tujuannya, berikan rekomendasi fitur tambahan yang relevan,
+lalu susun prompt final yang detail dengan auto-inject skills vanzee yang cocok."
 ```
+````
 
 ---
 
@@ -330,10 +349,14 @@ vanzee-skills/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── detection-mechanics-and-bypass.md # Perplexity & burstiness math, Turnitin/GPTZero bypass
-│   └── academic-student-support/
+│   ├── academic-student-support/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── academic-frameworks-and-guidelines.md # 6 college paper types, TK-S3 pedagogy & defense cheat sheet
+│   └── prompt-architect/
 │       ├── SKILL.md
 │       └── references/
-│           └── academic-frameworks-and-guidelines.md # 6 college paper types, TK-S3 pedagogy & defense cheat sheet
+│           └── prompt-expansion-and-skills-mapping.md # 4-stage expansion protocol, skill directory & anti-slop rules
 ├── install.ps1                              # Automated installer for Windows environments
 ├── install.sh                               # Automated installer for macOS & Linux
 ├── LICENSE                                  # MIT License

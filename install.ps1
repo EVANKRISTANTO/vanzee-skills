@@ -131,7 +131,7 @@ switch ($choice.ToUpper().Trim()) {
     }
     Default {
         $chosenSkillNames = $AllSkills | ForEach-Object { $_.Name }
-        Write-Host "`n> Mode Dipilih: [A] Full Flagship Suite (Semua 9 Skill)" -ForegroundColor Green
+        Write-Host "`n> Mode Dipilih: [A] Full Flagship Suite (Semua 11 Skill)" -ForegroundColor Green
     }
 }
 

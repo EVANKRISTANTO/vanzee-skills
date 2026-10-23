@@ -102,14 +102,14 @@ echo -e "${BOLD}${WHITE}╰─────────────────�
 
 # --- Step 2: Interactive Skill Selection ---
 echo -e "${BOLD}${WHITE}╭── [2/4] Choose Installation Mode ────────────────────────────────────╮${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${GREEN}[A] Full Flagship Suite (All 14 Skills)                  [DEFAULT]${RESET}  ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${GREEN}[A] Full Flagship Suite (All 15 Skills)                  [DEFAULT]${RESET}  ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[1] Web & Fullstack Pack      (evankristanto, fullstack, perf, resp) ${RESET} ${BOLD}${WHITE}│${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[2] Growth & Marketing Pack   (copywriting, caption, zero-ai)      ${RESET} ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[2] Growth & Marketing Pack   (copywriting, caption, zero-ai, art) ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[3] Deep Reasoning & Prompts  (deep-think, risk, prompt-architect) ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[4] Academic & Student Pack   (academic-support, zero-ai)          ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[5] Enterprise & Business Pack(business-growth, risk, copywriting) ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[6] Product R&D & Pricing Pack(product-rnd, pricing-decision, biz) ${RESET} ${BOLD}${WHITE}│${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${YELLOW}[C] Custom Selection          (Pilih nomor skill manual 1-14)      ${RESET} ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${YELLOW}[C] Custom Selection          (Pilih nomor skill manual 1-15)      ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}╰───────────────────────────────────────────────────────────────────────╯${RESET}\n"
 
 ALL_SKILL_NAMES=(
@@ -127,6 +127,7 @@ ALL_SKILL_NAMES=(
   "fullstack-developer"
   "product-rnd-architect"
   "pricing-decision-strategist"
+  "editorial-article-maker"
 )
 
 read -r -p "Pilih preset yang mau di-install [A/1/2/3/4/5/6/C] (Tekan ENTER untuk Semua): " USER_CHOICE || USER_CHOICE="A"
@@ -140,7 +141,7 @@ case "${USER_CHOICE^^}" in
     echo -e "\n${CYAN}➜ Mode Dipilih: [1] Web & Fullstack Engineering Pack${RESET}"
     ;;
   2)
-    CHOSEN_SKILLS=("conversion-copywriting" "social-caption-maker" "zero-ai-detector")
+    CHOSEN_SKILLS=("conversion-copywriting" "social-caption-maker" "zero-ai-detector" "editorial-article-maker")
     echo -e "\n${CYAN}➜ Mode Dipilih: [2] Growth & Marketing Pack${RESET}"
     ;;
   3)
@@ -175,6 +176,7 @@ case "${USER_CHOICE^^}" in
     echo -e "${YELLOW}│${RESET}  [12] [FSK] fullstack-developer   - Frontend RSC, Clean API, Postgres & Docker"
     echo -e "${YELLOW}│${RESET}  [13] [RND] product-rnd-architect - F&B, Physical & Cosmetics R&D Formulation"
     echo -e "${YELLOW}│${RESET}  [14] [PRC] pricing-decision-strategist - CMO & CFO Dual-Lens Markup & Margin"
+    echo -e "${YELLOW}│${RESET}  [15] [ART] editorial-article-maker - Anti-AI Journalism, SEO Pillar Articles & News"
     echo -e "${YELLOW}╰───────────────────────────────────────────────────────────────────────╯${RESET}\n"
     read -r -p "Ketik nomor skill yang mau dipasang (contoh: 1 3 5 8): " CUSTOM_NUMS || CUSTOM_NUMS=""
     if [ -z "$CUSTOM_NUMS" ]; then
@@ -191,7 +193,7 @@ case "${USER_CHOICE^^}" in
     ;;
   *)
     CHOSEN_SKILLS=("${ALL_SKILL_NAMES[@]}")
-    echo -e "\n${GREEN}➜ Mode Dipilih: [A] Full Flagship Suite (Semua 14 Skill)${RESET}"
+    echo -e "\n${GREEN}➜ Mode Dipilih: [A] Full Flagship Suite (Semua 15 Skill)${RESET}"
     ;;
 esac
 
@@ -296,6 +298,7 @@ for sn in "${CHOSEN_SKILLS[@]}"; do
     fullstack-developer)       echo -e "  ${PURPLE}• Fullstack:${RESET}      ${DIM}\"Bangun REST API / tRPC dan frontend Next.js pakai fullstack-developer\"${RESET}" ;;
     product-rnd-architect)     echo -e "  ${PURPLE}• Product R&D:${RESET}    ${DIM}\"Formulasi produk minuman RTD dan uji shelf life pakai product-rnd-architect\"${RESET}" ;;
     pricing-decision-strategist)echo -e "  ${PURPLE}• Pricing Strat:${RESET}  ${DIM}\"Analisis markup harga dan HPP dual-lens CMO-CFO pakai pricing-decision-strategist\"${RESET}" ;;
+    editorial-article-maker)   echo -e "  ${PURPLE}• Editorial Art:${RESET}  ${DIM}\"Tulis artikel berita mendalam dan SEO friendly pakai editorial-article-maker\"${RESET}" ;;
   esac
 done
 

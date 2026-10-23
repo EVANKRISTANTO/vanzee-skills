@@ -23,7 +23,7 @@
 [![Anti-AI Slop](https://img.shields.io/badge/Aesthetic-Anti--AI_Slop-FF5B61.svg?style=for-the-badge)](#-the-anti-slop-manifesto)
 [![Multi-Agent](https://img.shields.io/badge/Compatible-Antigravity_|_Claude_|_Codex_|_Cursor-00F0FF.svg?style=for-the-badge)](#-one-line-installation)
 
-[Karya Anak Bangsa](#-karya-anak-bangsa-the-indonesian-engineering-pride) • [The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 14 Flagship Skills](#-the-14-flagship-skills) • [The Rules Suite](#-the-rules-suite) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
+[Karya Anak Bangsa](#-karya-anak-bangsa-the-indonesian-engineering-pride) • [The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 15 Flagship Skills](#-the-15-flagship-skills) • [The Rules Suite](#-the-rules-suite) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
 
 ---
 
@@ -53,7 +53,7 @@ Most AI coding agents write code that works, but looks and reads like an uninspi
 
 ---
 
-## ⚡ The 14 Flagship Skills
+## ⚡ The 15 Flagship Skills
 
 ```text
 vanzee-skills/
@@ -71,7 +71,8 @@ vanzee-skills/
 │   ├── zero-ai-detector/        # 👻 0% AI Detection Bypass (Turnitin/GPTZero), Burstiness & Perplexity
 │   ├── academic-student-support/# 🎓 Dual-Output Academic Mastery (TK to S3, 6 College Papers, Oral Defense)
 │   ├── prompt-architect/        # 📐 Meta-Prompt Generator, Ideation Expander & Skills Auto-Mapper
-│   └── business-growth-strategist/# 💼 Corporate Finance, OSS-RBA Licensing & Profit Engine
+│   ├── business-growth-strategist/# 💼 Corporate Finance, OSS-RBA Licensing & Profit Engine
+│   └── editorial-article-maker/# 📰 Anti-AI Journalism, SEO Pillar Articles & Newsroom Engine
 ```
 
 ---
@@ -220,6 +221,16 @@ vanzee-skills/
 * **CMO vs CFO Reconciled Assessment**: Evaluates allowable CAC headroom on Meta/TikTok ads against working capital inventory drag, cash conversion cycles (CCC), and supplier inflation cushions.
 * **Multi-Tier Retail Stacking**: Calculates full channel waterfall margins for modern trade retail (Distributor 15%–20%, Retailer 30%–35%) before launch to prevent negative net cash realization.
 * **Consumer Psychology & Decoy Bundling**: Implements charm pricing (`.900`) vs prestige round pricing (`.000`) and asymmetrical 3-tier decoy packaging (Starter -> Hero 3-Pack -> VIP Anchor).
+
+---
+
+### 📰 15. `editorial-article-maker` &mdash; Anti-AI Journalism & SEO Blog Engine
+> *Transforms raw news tips, breaking events, and user outlines into publication-grade journalism, deep editorial features, or high-ranking SEO pillar articles without robotic AI cadence.*
+
+* **Inverted Pyramid Newsroom Structure**: Leads with an impact-heavy 5W+1H lede, immediately grounds the significance in a nut graph, unpacks the narrative with verified context, source attributions, and ends with a forward-looking kicker.
+* **Featured Snippet Direct-Answer Blocks**: Automatically crafts 40–50 word direct definitions under H2 queries, 3-sentence maximum mobile paragraph limits, and schema-ready FAQ blocks for Google and AI search engines (Perplexity, ChatGPT).
+* **Zero Robotic AI Cadence**: Permanently bans generic tropes (*delve, testament, tapestry, in today's fast-paced world, in conclusion*); enforces a 3-sentence rhythmic wave (punchy 5-word hit, explanatory 18-word bridge, balanced 12-word conclusion) with concrete nouns and active verbs.
+* **Standard 3-Part Delivery Package**: Delivers every piece with (1) Metadata Package (Title <60 char, Meta Description <155 char, URL Slug, Primary/Secondary/LSI keywords), (2) The Full Editorial Body (H1–H3 hierarchy, callouts, pull quotes), and (3) Visual Direction & Social Distribution Angles (IG, X, Threads).
 
 ---
 
@@ -425,6 +436,16 @@ Gunakan skill pricing-decision-strategist untuk menentukan harga jual terbaik:
 3. Simulasi jika produk ini mau masuk ke distributor & modern retail (Guardian/Watson).
 4. Rekomendasi psikologi harga dan struktur bundling 3-tier (Hero bundle)."
 ```
+<!-- slide -->
+### 📰 Publication-Grade Journalism & SEO Article
+```text
+"Tulis artikel berita mendalam tentang peluncuran ekosistem baterai kendaraan listrik nasional terbaru pakai skill editorial-article-maker.
+Tolong buatkan:
+1. Struktur piramida terbalik (5W+1H impact lede, nut graph signifikansi industri nikel, konteks rantai pasok global).
+2. Gaya bahasa jurnalisme investigatif tajam (tanpa kata klise AI, ritme variatif 3 kalimat bergelombang).
+3. Paket SEO lengkap: Meta Title (<60 char), Meta Description (<155 char), URL slug, primary/LSI keywords, dan schema-ready FAQ.
+4. Rekomendasi angle visual infografis dan hook distribusi medsos (X/Twitter thread & LinkedIn editorial)."
+```
 ````
 
 ---
@@ -499,12 +520,18 @@ vanzee-skills/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── prompt-expansion-and-skills-mapping.md # 4-stage expansion protocol, skill directory & anti-slop rules
-│   └── business-growth-strategist/
+│   ├── business-growth-strategist/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── financial-engineering-and-unit-economics.md # CAC/LTV, CCC, burn rate, pricing power & 3-case models
+│   │       ├── legal-licensing-and-compliance.md           # PT/CV, OSS-RBA, KBLI, HKI, Halal, BPOM, Tax PP 55/2022
+│   │       └── growth-strategy-and-profit-maximization.md   # Best-Option matrix, GTM, moats, bootstrapping vs VC
+│   └── editorial-article-maker/
 │       ├── SKILL.md
 │       └── references/
-│           ├── financial-engineering-and-unit-economics.md # CAC/LTV, CCC, burn rate, pricing power & 3-case models
-│           ├── legal-licensing-and-compliance.md           # PT/CV, OSS-RBA, KBLI, HKI, Halal, BPOM, Tax PP 55/2022
-│           └── growth-strategy-and-profit-maximization.md   # Best-Option matrix, GTM, moats, bootstrapping vs VC
+│           ├── journalism-and-news-writing.md        # Inverted pyramid, 5W+1H lede, nut graph & attribution
+│           ├── seo-blog-and-pillar-architecture.md   # Search intent, featured snippet boxes & mobile rhythm
+│           └── anti-ai-voice-and-human-cadence.md    # Banned AI tropes, 3-sentence wave & sensory grounding
 ├── rules/
 │   ├── 01-anti-slop-web-craft.md                # Modern Bento UI, clamp() math, Core Web Vitals & OWASP Top 10
 │   ├── 02-anti-ai-voice.md                      # Banned AI N-grams, dynamic burstiness & high perplexity

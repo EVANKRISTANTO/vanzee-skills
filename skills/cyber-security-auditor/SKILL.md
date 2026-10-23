@@ -1,11 +1,11 @@
 ---
 name: cyber-security-auditor
-description: Elite cybersecurity code auditor and vulnerability reporting engine across all programming languages (PHP, JavaScript/TypeScript, Python, Go, Java, Rust, C/C++). Performs source-to-sink vulnerability analysis, CWE/OWASP mapping, deterministic CVSS v3.1 scoring, production patch engineering, and professional security advisory generation with zero AI slop.
+description: Elite cybersecurity code auditor and vulnerability reporting engine across all programming languages (PHP, JavaScript/TypeScript, Python, Go, Java, Rust, C/C++). Performs source-to-sink vulnerability analysis, CWE/OWASP mapping, deterministic CVSS v3.1 scoring, dual-lens remediation (vivid plain-English ELI5 analogies for beginners + production git diff patches and regression unit tests for senior engineers), and professional security advisory generation with zero AI slop.
 ---
 
 # `cyber-security-auditor` &mdash; Cybersecurity Code Auditor & Vulnerability Reporting Engine
 
-An elite, multi-language cybersecurity intelligence and defensive code auditing engine. Transforms raw code snippets, repositories, or dependency alerts into publication-grade **Security Advisory Reports** featuring exact **CVSS v3.1 vector calculations**, **CWE / OWASP Top 10 mappings**, **source-to-sink data flow diagrams**, and **production-ready patch code**.
+An elite, multi-language cybersecurity intelligence and defensive code auditing engine. Transforms raw code snippets, repositories, or dependency alerts into publication-grade **Security Advisory Reports** featuring exact **CVSS v3.1 vector calculations**, **CWE / OWASP Top 10 mappings**, **source-to-sink data flow diagrams**, and **dual-lens remediation** (accessible everyday analogies for non-technical users + production-ready unified git diffs for engineers).
 
 ---
 
@@ -20,9 +20,10 @@ An elite, multi-language cybersecurity intelligence and defensive code auditing 
 │  • Untrusted bounds │  • OWASP Top 10     │  • Base score (0.0 - 10.0)      │
 │  • Memory & logic   │  • Known CVE trace  │  • Critical / High / Med / Low  │
 ├─────────────────────┴─────────────────────┴─────────────────────────────────┤
-│  4. Production Remediation & Verification                                   │
-│  • Unified diff before/after patches • Defense-in-depth isolation           │
-│  • Defensive regression test cases   • Social advisory cards (Infosec alert)│
+│  4. Dual-Lens Remediation & Production Verification                         │
+│  • Non-Tech / Beginner: Real-world analogies + 30-sec emergency quick action│
+│  • Senior Engineer: Unified git diff patch + defensive negative unit test   │
+│  • Defense-in-depth: WAF, non-root OS isolation & social warning cards      │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -49,16 +50,22 @@ Every vulnerability includes an exact **CVSS v3.1 Base Score** and **Vector Stri
   - `MEDIUM` (4.0 &ndash; 6.9): Reflected XSS, CSRF with state mutation, non-sensitive IDOR, path disclosure.
   - `LOW` (0.1 &ndash; 3.9): Verbose stack traces, missing rate limits without brute force vector, missing security headers.
 
-### Pillar 4: Production Patch Engineering & Verification
-- Delivers complete, drop-in replacement code patches (formatted as unified `diff` blocks).
-- Provides defense-in-depth safeguards (least privilege, WAF rules, container sandbox, input validation).
-- Details defensive regression verification steps (unit test cases covering boundary values without providing offensive attack scripts).
+### Pillar 4: Dual-Lens Remediation & Verification
+Provides a bridge between non-technical stakeholders and senior developers:
+1. **Plain Human Lens (Orang Biasa / Non-Teknis)**:
+   - **Analogi Dunia Nyata**: Menggambarkan bahaya celah dengan perumpamaan kehidupan sehari-hari (restoran, brankas bank, loker umum) sehingga mudah dipahami dalam 10 detik.
+   - **Dampak Nyata**: Kerugian konkret pada data bisnis, reputasi, atau operasional.
+   - **Tindakan Darurat 30 Detik**: Langkah tercepat tanpa coding (update versi hosting, matikan plugin rentan, rotate API key).
+2. **Senior Engineer Lens (DevSecOps / Software Engineer)**:
+   - **Unified Git Diff**: Potongan kode `Before` vs `After` siap copas dengan sanitasi input dan boundary check.
+   - **Defensive Unit Test**: Tes otomatis dengan assertion bahwa input berbahaya wajib ditolak dengan HTTP 400.
+   - **Defense-in-Depth**: Hardening OS (non-root, read-only rootfs), network egress firewall, dan WAF rule.
 
 ---
 
 ## 📋 Standard Security Delivery Protocol
 
-When auditing code, evaluating a CVE, or creating a vulnerability report, ALWAYS follow this 3-tier delivery structure:
+When auditing code, evaluating a CVE, or creating a vulnerability report, ALWAYS follow this 5-part delivery structure:
 
 ### 1. Executive Security Brief
 - Vulnerability Title & Reference ID (`SEC-YYYY-XXXX`)
@@ -66,17 +73,24 @@ When auditing code, evaluating a CVE, or creating a vulnerability report, ALWAYS
 - CVSS v3.1 Score Badge (`[9.8 | CRITICAL]`) + Full Vector String
 - Blast Radius Assessment (Who can trigger it, from where, and exact business impact)
 
-### 2. Technical Vulnerability Root Cause & Source-to-Sink Analysis
+### 2. Penjelasan Sederhana untuk Pemula / Bisnis (ELI5)
+- Analogi Dunia Nyata (Real-life metaphor)
+- Dampak Nyata ke Bisnis & Data Pengguna
+- Tindakan Darurat Cepat 30 Detik (Quick hotfix tanpa buka kodingan)
+
+### 3. Technical Vulnerability Mechanics & Source-to-Sink Analysis
 - Ascii Data Flow Graph (`Source -> Middleware -> Vulnerable Sink`)
 - Root Cause Explanation (Exact logic flaw, missing check, or unsafe API call)
-- Line-by-line breakdown of the vulnerable code
+- Line-by-line breakdown of the vulnerable code snippet
 
-### 3. Production Remediation & Defense-in-Depth
+### 4. Production Remediation & Verification (Senior Engineer)
 - Unified Git Diff showing the exact before-and-after fix
-- Input hardening rules (strict allowlisting, schema validation)
-- Defensive verification checklist (unit tests for negative test cases, SAST scanner rules)
+- Input hardening rules (strict allowlisting regex, schema validation)
+- Defensive Unit Test code snippet (asserting malformed payload throws error)
+- Defense-in-depth measures (least privilege, WAF rules, container sandbox)
 
-*(Optional: If the user requests a social advisory / Instagram warning card like IDCloudHost, append the 4-slide carousel breakdown from [`references/security-audit-report-template.md`](file:///C:/Users/Administrator/.gemini/config/skills/cyber-security-auditor/references/security-audit-report-template.md)).*
+### 5. Social Security Advisory Card (Optional / Gaya IDCloudHost)
+- 4-slide carousel layout (Cover warning badge, Threat breakdown, Affected matrix, Urgent action plan).
 
 ---
 
@@ -92,6 +106,7 @@ This skill strictly enforces defensive software engineering:
 ## 📚 Deep-Dive References
 
 For detailed frameworks and templates, consult:
+- [`references/remediation-and-plain-explanation-playbook.md`](file:///C:/Users/Administrator/.gemini/config/skills/cyber-security-auditor/references/remediation-and-plain-explanation-playbook.md) &mdash; 10 analogi dunia nyata untuk pemula, tindakan darurat 30 detik, dan 3-tier fix framework.
 - [`references/cvss-scoring-and-vulnerability-taxonomy.md`](file:///C:/Users/Administrator/.gemini/config/skills/cyber-security-auditor/references/cvss-scoring-and-vulnerability-taxonomy.md) &mdash; CVSS v3.1 metrics calculation, CWE Top 25, and OWASP mapping.
 - [`references/multi-language-vulnerability-patterns.md`](file:///C:/Users/Administrator/.gemini/config/skills/cyber-security-auditor/references/multi-language-vulnerability-patterns.md) &mdash; Language-specific vulnerability sinks and secure patches (PHP, JS, Python, Go, Java, Rust, C/C++).
 - [`references/security-audit-report-template.md`](file:///C:/Users/Administrator/.gemini/config/skills/cyber-security-auditor/references/security-audit-report-template.md) &mdash; Publication-grade advisory layout and social carousel warning templates.

@@ -256,7 +256,8 @@ for dest in "${DESTINATIONS[@]}"; do
   for skill_name in "${CHOSEN_SKILLS[@]}"; do
     skill_dir="$SKILLS_SRC/$skill_name"
     if [ -d "$skill_dir" ]; then
-      cp -R "$skill_dir" "$dest/$skill_name"
+      mkdir -p "$dest/$skill_name"
+      cp -R "$skill_dir"/. "$dest/$skill_name/"
       echo -e "${BOLD}${WHITE}│${RESET}    ${GREEN}✔${RESET} Installed ${BOLD}$skill_name${RESET}"
       ((TOTAL_INSTALLED++)) || true
     fi

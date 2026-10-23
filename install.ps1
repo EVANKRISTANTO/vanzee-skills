@@ -200,7 +200,10 @@ foreach ($dest in $Destinations) {
         $srcDir = Join-Path $SkillsSrc $skillName
         if (Test-Path $srcDir) {
             $targetDir = Join-Path $dest $skillName
-            Copy-Item -Path $srcDir -Destination $targetDir -Recurse -Force
+            if (-not (Test-Path $targetDir)) {
+                New-Item -ItemType Directory -Path $targetDir -Force | Out-Null
+            }
+            Copy-Item -Path (Join-Path $srcDir '*') -Destination $targetDir -Recurse -Force
             Write-Host ("|    [OK] Installed " + $skillName) -ForegroundColor Green
             $totalInstalled++
         }

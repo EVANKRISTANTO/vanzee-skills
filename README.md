@@ -236,13 +236,15 @@ vanzee-skills/
 ---
 
 ### 🛡️ 16. `cyber-security-auditor` &mdash; Cybersecurity Code Auditor & Vulnerability Reporting Engine
-> *Multi-language defensive security intelligence engine across PHP, JavaScript/TypeScript, Python, Go, Java, Rust, and C/C++. Performs source-to-sink vulnerability auditing, CWE/OWASP mapping, deterministic CVSS v3.1 scoring, and production patch generation.*
+> *Multi-language defensive security intelligence engine across PHP, JavaScript/TypeScript, Python, Go, Java, Rust, and C/C++. Performs source-to-sink vulnerability auditing, CWE/OWASP mapping, deterministic CVSS v3.1 scoring, and dual-lens remediation for both beginners and senior engineers.*
 
 * **Multi-Language Source-to-Sink Auditing**: Tracks untrusted user input across controllers, filters, and vulnerable sinks (RCE via `shell_exec`/`system`, SQLi in raw queries, prototype pollution, SSRF to cloud metadata, insecure deserialization POP chains, and memory overflows).
 * **Deterministic CVSS v3.1 Scoring Engine**: Formulates exact CVSS base scores (0.0–10.0) with full vector strings (`CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`) across Critical, High, Medium, and Low severity tiers.
+* **Dual-Lens Remediation Architecture**: 
+  - **Plain Human Lens (Orang Awam / Pemula)**: Menggambarkan bahaya celah dengan analogi nyata sehari-hari (contoh: koki restoran membaca pesan racun, kasir bank mencairkan brankas, kunci loker tertukar) serta langkah darurat 30 detik tanpa coding.
+  - **Senior Engineer Lens**: Memberikan analisis root cause level interpreter/memory, drop-in unified git diff code patch, defense-in-depth isolation, dan defensive negative unit test.
 * **Universal Threat Taxonomy**: Cross-references findings against official CWE IDs (`CWE-78`, `CWE-89`, `CWE-918`, `CWE-639`) and OWASP Top 10:2021 classifications.
-* **Production Patch & Verification Engineering**: Provides unified before/after git diff code patches, defense-in-depth isolation rules (least privilege, WAF rules), and defensive unit test checklists without weaponized exploit payloads.
-* **Dual Output Modes**: Formats results as an Enterprise Security Advisory Report or a Social Security Alert Card (carousel format with alert badges, affected versions, and urgent remediation steps like the IDCloudHost advisory).
+* **Social Warning Card Ready**: Formats findings as publication-ready Enterprise Security Advisories or 4-slide social media security warning carousels (gaya IDCloudHost infosec alerts).
 
 ---
 
@@ -556,6 +558,7 @@ vanzee-skills/
 │   └── cyber-security-auditor/
 │       ├── SKILL.md
 │       └── references/
+│           ├── remediation-and-plain-explanation-playbook.md # 10 real-world analogies & 30s emergency actions
 │           ├── cvss-scoring-and-vulnerability-taxonomy.md # CVSS v3.1 metrics, CWE Top 25 & OWASP mapping
 │           ├── multi-language-vulnerability-patterns.md   # Multi-language sinks & patches (PHP, JS, Py, Go, etc.)
 │           └── security-audit-report-template.md          # Enterprise advisory & social warning card templates

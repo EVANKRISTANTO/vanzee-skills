@@ -27,7 +27,15 @@ Use this structure when auditing codebases, PRs, or architecture designs.
 
 ---
 
-### 2. Technical Vulnerability Mechanics & Source-to-Sink Trace
+### 2. Penjelasan Sederhana untuk Pemula / Bisnis (ELI5 - Plain Human Lens)
+* **Analogi Dunia Nyata:** 
+  > *"[Jelaskan celah ini memakai analogi sehari-hari yang sangat mudah dipahami orang awam. Contoh: 'Bayangkan kamu memesan makanan di restoran lewat secarik kertas. Kertas itu kamu tulis: 'Bawakan nasi goreng, LALU bakar restorannya'. Koki restoran langsung membaca catatan itu dan beneran membakar restorannya karena dia tidak membedakan mana pesanan makanan dan mana perintah jahat'.]"*
+* **Dampak Nyata yang Terjadi:** [Jelaskan tanpa bahasa rumit apa akibatnya bagi bisnis, website, atau pengguna, misal: data bocor, server terkunci ransomware, atau akun dicuri orang].
+* **Tindakan Darurat 30 Detik:** [Langkah tercepat yang bisa dilakukan non-programmer sekarang juga tanpa harus buka kodingan, misal: klik tombol update versi di panel cloud, matikan plugin rentan, atau revoke API key].
+
+---
+
+### 3. Technical Vulnerability Mechanics & Source-to-Sink Trace
 
 #### Data Flow Graph:
 ```text
@@ -53,9 +61,9 @@ Use this structure when auditing codebases, PRs, or architecture designs.
 
 ---
 
-### 3. Remediation & Patch Code (Drop-in Fix)
+### 4. Remediation & Patch Code (Drop-in Fix)
 
-#### Secure Refactoring:
+#### Secure Refactoring (Unified Git Diff):
 ```diff
 - // VULNERABLE CODE
 - const result = execSync(`ffmpeg -i ${userInput} output.mp4`);
@@ -73,9 +81,20 @@ Use this structure when auditing codebases, PRs, or architecture designs.
 2. **Privilege Demotion:** [Run service as non-root, drop Linux capabilities]
 3. **Network Isolation:** [Egress firewall rules blocking outbound connections from workers]
 
+#### Defensive Unit Test (Regression Safeguard):
+```language
+// Automated test asserting malformed / malicious input is rejected with HTTP 400
+test('should reject malicious input payload with validation error', async () => {
+    const maliciousPayload = '../../../etc/passwd';
+    await expect(handleUserInput(maliciousPayload))
+        .rejects
+        .toThrow('Invalid file format');
+});
+```
+
 ---
 
-### 4. Verification & Regression Checklist (Defensive Only)
+### 5. Verification & Regression Checklist (Defensive Only)
 - [ ] Verify unit test covering malicious input boundaries (e.g. `../`, semicolons, payload strings) rejects with HTTP 400.
 - [ ] Confirm no regression on valid legitimate payloads.
 - [ ] Verify static analysis scanner (Semgrep / SonarQube / Bandit / CodeQL) passes clean with 0 warnings.

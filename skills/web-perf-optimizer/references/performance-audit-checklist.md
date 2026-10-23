@@ -122,3 +122,36 @@ Cache-Control: public, max-age=31536000, immutable
 # HTML Documents:
 Cache-Control: public, max-age=0, must-revalidate
 ```
+
+---
+
+## 6. Accessibility & Form Labels (Preventing Lighthouse A11y Penalties)
+
+1. **Every Form Control Needs a Accessible Name**:
+   - Every `<input>`, `<textarea>`, and `<select>` MUST have an associated `<label>` or explicit `aria-label`:
+   ```html
+   <!-- Method A: Explicit htmlFor -->
+   <label htmlFor="service-select" className="text-sm font-medium text-slate-200">Pilih Layanan</label>
+   <select id="service-select" name="service" aria-label="Pilih Layanan">
+     <option value="pengadaan">Pengadaan Alat Industri</option>
+   </select>
+
+   <!-- Method B: aria-label for compact/icon inputs -->
+   <input type="text" name="search" placeholder="Cari brand..." aria-label="Cari brand dan produk" />
+   ```
+2. **WCAG AA 4.5:1 Contrast Guarantee on Dark Themes**:
+   - Never use `text-slate-500` (`#64748b`) on `#0c111e` or `#07080c` for small text (`text-[10px]` or `text-xs`).
+   - Use `text-slate-400` (`#94a3b8`) for regular text or `text-slate-300` (`#cbd5e1`) for small captions and tags.
+
+---
+
+## 7. The Golden Audit Mandate: Production vs Dev Benchmarking
+
+When testing with Lighthouse:
+```bash
+# ❌ NEVER benchmark 'npm run dev' / 'next dev' (will report 50-60 due to scheduler.development.js & HMR)
+# ✅ ALWAYS benchmark the production build:
+npm run build
+npm run start
+```
+*In production mode, tree-shaking removes unused icons, the React development scheduler is eliminated, bundles are minified, and TBT drops from 2,900ms to under 50ms.*

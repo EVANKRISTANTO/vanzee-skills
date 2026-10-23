@@ -103,12 +103,14 @@ vanzee-skills/
 ---
 
 ### 🚀 3. `web-perf-optimizer` &mdash; Ultra-Lightweight Speed & Core Web Vitals
-> *Guaranteed 100/100 Lighthouse performance, sub-second LCP, zero CLS, and sub-50ms INP.*
+> *Guaranteed 100/100 Lighthouse performance, sub-second LCP, zero CLS, sub-50ms INP/TBT, and 0KB RSC hydration.*
 
 * **Zero Cumulative Layout Shift (CLS = 0.00)**: Mandatory space reservation with CSS `aspect-ratio` and font-fallback metric overrides (`size-adjust`) to eliminate layout shifts.
 * **Sub-Second LCP (< 1.2s)**: High-priority AVIF/WebP image delivery, critical CSS inlining, and hero image preloading with `fetchpriority="high"`.
-* **Main-Thread Relief (INP < 50ms)**: Long-task chunking using `scheduler.yield()`, passive event listeners (`{ passive: true }`), and virtualized lists.
-* **CSS Containment**: Uses `content-visibility: auto` to skip layout and painting for off-screen sections until scrolled into view.
+* **0KB Hydration & TBT Elimination (< 50ms)**: Pure React Server Components for heavy static catalogs, pushing `'use client'` to leaf widgets, and chunking tasks with `scheduler.yield()`.
+* **The Dev vs Prod Benchmark Rule**: Enforces testing against optimized production builds (`npm run build && npm run start`), eliminating the 2.9s development scheduler (`scheduler.development.js`) and HMR WebSockets.
+* **WCAG AA Contrast & A11y Standards**: Enforces minimum 4.5:1 contrast ratios on dark backgrounds (replacing failing `text-slate-500` on `#0c111e` with `text-slate-400`/`300`) and mandatory accessible labels for all form controls.
+* **CSS Containment**: Uses `content-visibility: auto; contain-intrinsic-size: 0 800px;` to skip layout and painting for off-screen sections until scrolled into view.
 
 ---
 
@@ -499,7 +501,8 @@ vanzee-skills/
 │   ├── web-perf-optimizer/
 │   │   ├── SKILL.md
 │   │   └── references/
-│   │       └── performance-audit-checklist.md # Core Web Vitals, asset diet & main-thread relief
+│   │       ├── lighthouse-100-playbook-and-dev-pitfalls.md # Dev vs prod benchmarks, 0KB hydration & contrast
+│   │       └── performance-audit-checklist.md             # Core Web Vitals, asset diet & main-thread relief
 │   ├── product-rnd-architect/
 │   │   ├── SKILL.md
 │   │   └── references/

@@ -2,52 +2,85 @@
 name: web-perf-optimizer
 description: >-
   Ultra-lightweight website performance optimization skill across all devices: achieve 100/100
-  Lighthouse scores, sub-second LCP, zero CLS (Cumulative Layout Shift), sub-50ms INP, next-gen
-  image encoding (AVIF/WebP), bundle trimming, content-visibility, and main-thread relief.
+  Lighthouse scores, sub-second LCP, zero CLS (Cumulative Layout Shift), sub-50ms INP/TBT, next-gen
+  image encoding (AVIF/WebP), bundle trimming, RSC 0KB hydration, and main-thread relief.
 ---
 
-# Web Performance & Speed Optimization Skill
+# `web-perf-optimizer` &mdash; 100/100 Lighthouse & High-Performance Engineering Engine
 
-A dedicated engineering runbook for shipping lightning-fast, ultra-lightweight web applications that load in under 1 second and run smoothly at 60–120 FPS on all devices, from budget mobile phones to high-end desktop workstations.
-
----
-
-## The 4 Performance Pillars
-
-### 1. Core Web Vitals Benchmarks (Gold Standard)
-| Metric | Threshold | Primary Culprit | Immediate Fix |
-|--------|-----------|-----------------|---------------|
-| **LCP** (Largest Contentful Paint) | **< 1.2s** | Late-loaded hero images or client-rendered hero text | Preload hero with `fetchpriority="high"`, serve AVIF/WebP, inline critical CSS. |
-| **INP** (Interaction to Next Paint) | **< 50ms** | Long JavaScript tasks blocking the main thread | Break long loops with `scheduler.yield()`, use passive event listeners, debounce search inputs. |
-| **CLS** (Cumulative Layout Shift) | **= 0.00** | Images/ads/embeds missing explicit dimensions | Always specify `width`, `height`, and `aspect-ratio` on all media and container wrappers. |
+A production-grade performance engineering runbook for shipping lightning-fast, ultra-lightweight web applications that achieve **100/100 Lighthouse scores**, load in under 1 second, and run at smooth 60–120 FPS across budget mobile devices and desktop workstations.
 
 ---
 
-## Performance Optimization Protocols
+## ⚡ The 5 Core Web Vitals Benchmarks (Gold Standard)
 
-### A. Asset Diet (Zero Byte Waste)
-1. **Next-Gen Imagery**: Convert all images to AVIF (1st choice, ~50% smaller than JPEG) or WebP. Use `<picture>` with responsive `srcset` and `sizes` attributes.
-2. **Explicit Media Dimensions**: Never render an `<img>` or `<video>` without reserving layout space (`width="..." height="..." style="aspect-ratio: ...;"`).
+| Metric | Target | Fatal Culprit | Immediate Engineering Fix |
+|:-------|:-------|:--------------|:--------------------------|
+| **LCP** (Largest Contentful Paint) | **< 1.2s** | Late-loaded hero images, un-preloaded fonts, or client-rendered hero text | Preload hero with `fetchpriority="high"`, serve AVIF/WebP, inline critical CSS, SSR hero text. |
+| **TBT** (Total Blocking Time) | **< 50ms** | Client hydration of massive DOM, development runtime scheduler, or heavy JS bundles | Keep static sections as Pure RSC (0KB client JS), isolate `'use client'` to leaves, chunk tasks with `scheduler.yield()`. |
+| **INP** (Interaction to Next Paint) | **< 50ms** | Long JavaScript tasks blocking the main thread on user interaction | Passive event listeners, debouncing search inputs, offloading heavy calculations to Web Workers. |
+| **CLS** (Cumulative Layout Shift) | **= 0.00** | Images, ads, or embeds missing explicit dimensions; font swapping shifts | Always specify `width`, `height`, and `aspect-ratio`; match fallback font metrics with `@font-face` overrides. |
+| **FCP** (First Contentful Paint) | **< 0.8s** | Slow server TTFB, render-blocking stylesheets or synchronous `<script>` tags | Edge CDN caching, critical CSS inlining, defer non-critical scripts (`async`/`defer`). |
+
+---
+
+## 🚨 The Golden Benchmark Rule: Production vs. Development
+
+> **CRITICAL PITFALL**: Never benchmark Lighthouse on `npm run dev` or `next dev` (`localhost:3000`)!
+> - In development mode, Next.js injects the unminified React development runtime (`scheduler.development.js`), active HMR WebSockets (which permanently disables BF-Cache), unminified CSS, and `Cache-Control: no-store`. This falsely drops the performance score to **50–65**.
+> - **Always build and run production before auditing**:
+>   ```bash
+>   npm run build
+>   npm run start
+>   ```
+>   In production mode, tree-shaking purges unused code, bundles are minified with SWC/Terser, development schedulers are removed, and TBT plummets from **2,900ms to < 50ms**.
+
+---
+
+## 🛠️ The 5 Pillars of Performance Optimization
+
+### Pillar 1: The 0KB Hydration Architecture (Server-Component-First)
+- **RSC by Default**: Keep pages and heavy static grids (catalogs, brand lists, client showcases, testimonials) as **Pure React Server Components (RSC)**. They emit clean HTML and **0 bytes of client JavaScript**.
+- **Push `'use client'` to the Leaves**: Only wrap interactive widgets (search bars, mobile menus, modal toggles) in client components. Never mark a root layout or main page with `'use client'`.
+
+### Pillar 2: Asset Diet & Next-Gen Media
+1. **Next-Gen Imagery**: Convert all images to AVIF (1st choice, ~50% smaller than JPEG) or WebP. Use `<picture>` with responsive `srcset` and `sizes`.
+2. **Explicit Media Dimensions**: Never render an `<img>` or `<video>` without reserving space (`width="..." height="..." style="aspect-ratio: ...;"`).
 3. **Font Hygiene**:
    - Use only `.woff2` font files.
-   - Strip unused character ranges via unicode subsetting.
-   - Always apply `font-display: swap` and match fallback font metrics (`size-adjust`) to prevent layout shifts.
+   - Apply `font-display: swap` (or `optional` for zero CLS).
+   - Match fallback font metrics (`size-adjust`, `ascent-override`, `descent-override`) to eliminate FOUT shifts.
 
-### B. Rendering & CSS Containment
-1. **Content Visibility**: Apply `content-visibility: auto; contain-intrinsic-size: 0 600px;` to all sections below the fold so the browser skips layout and painting work until scrolled into view.
+### Pillar 3: Rendering & CSS Containment
+1. **Content Visibility for Massive Offscreen Sections**:
+   Apply `content-visibility: auto; contain-intrinsic-size: 0 800px;` to all sections below the fold so the browser skips layout and painting work until scrolled into view.
 2. **60 FPS Animation Rule**: Only animate CSS `transform` and `opacity`. Never animate `width`, `height`, `margin`, `top`, or layout properties.
-3. **Passive Listeners**: Always append `{ passive: true }` to touch and wheel listeners.
+3. **Eliminate Forced Reflows**: Never read layout properties (`offsetHeight`, `getBoundingClientRect`) immediately followed by style mutations inside loops. Batch all reads first, then batch all writes.
 
-### C. JavaScript Execution & Bundle Pruning
-1. **Dependency Audit**:
-   - Strip monolithic libraries (`moment.js`, full `lodash`, un-shaken icon bundles).
-   - Use native browser APIs (`Intl`, `crypto.randomUUID()`, native ES array methods).
-2. **Dynamic Code Splitting**:
-   - Route-based code splitting.
-   - Lazy load heavy modals, rich text editors, and chart libraries on demand (`import()` or dynamic imports).
+### Pillar 4: Accessibility & Form Control Hygiene (100 A11y)
+1. **WCAG AA 4.5:1 Contrast Guarantee**:
+   - Never use `text-slate-500` (`#64748b`) on dark backgrounds (`#07080c`, `#0c111e`).
+   - Use `text-slate-400` (`#94a3b8`) for standard body text (5.3:1) and `text-slate-300` (`#cbd5e1`) for small captions and tags (8.4:1).
+2. **Accessible Form Names**:
+   - Every `<input>`, `<textarea>`, and `<select>` MUST have an associated `<label htmlFor="...">` or explicit `aria-label`.
 
-### D. Network & Caching Directives
-1. **Preconnect & DNS-Prefetch**: Preconnect to critical third-party origins (e.g. font providers, image CDNs) in `<head>`.
-2. **Cache-Control**: Set `Cache-Control: public, max-age=31536000, immutable` for static hashed assets.
+### Pillar 5: Production Bundling & Caching Directives
+1. **Next.js Compiler Optimization (`next.config.js`)**:
+   ```javascript
+   experimental: {
+     optimizePackageImports: ['lucide-react', 'date-fns', 'lodash'],
+   },
+   compiler: {
+     removeConsole: process.env.NODE_ENV === 'production',
+   }
+   ```
+2. **Aggressive Static Caching**:
+   Set `Cache-Control: public, max-age=31536000, immutable` for all static hashed assets (JS, CSS, images, fonts).
 
-*Reference: See [`references/performance-audit-checklist.md`](./references/performance-audit-checklist.md) for full audit recipes, code snippets, and metric override tables.*
+---
+
+## 📚 Deep-Dive References
+
+For detailed diagnostic scripts and metric override tables, consult:
+- [`references/lighthouse-100-playbook-and-dev-pitfalls.md`](file:///C:/Users/Administrator/.gemini/config/skills/web-perf-optimizer/references/lighthouse-100-playbook-and-dev-pitfalls.md) &mdash; In-depth diagnostics for eliminating 3-second TBT, fixing dev vs prod testing, contrast matrices, and `next.config.js` setups.
+- [`references/performance-audit-checklist.md`](file:///C:/Users/Administrator/.gemini/config/skills/web-perf-optimizer/references/performance-audit-checklist.md) &mdash; Step-by-step checklist, CLS formulas, font swap overrides, and code snippets.

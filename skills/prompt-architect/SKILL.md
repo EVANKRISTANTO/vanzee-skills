@@ -1,78 +1,114 @@
 ---
 name: prompt-architect
-description: >-
-  Advanced prompt generator & idea expander. Deconstructs raw user ideas, proactively expands them
-  with high-value recommendations, maps installed skills/rules (UI/UX, security, copywriting, SEO, reasoning),
-  and synthesizes ultra-detailed, production-grade prompts with zero AI slop.
+description: Advanced meta-prompt generator, ideation expander, and multi-skill orchestrator. Deconstructs raw user ideas, uncovers hidden technical and business constraints, proactively expands scope with high-value recommendations, and automatically maps and injects the user's full catalog of installed skills (all 16 Vanzee Flagship skills, specialized UI/UX design tools, and platform built-ins) into production-grade prompts with zero AI slop.
 ---
 
-# Prompt Architect: Meta-Prompt Generator & Ideation Expander
+# `prompt-architect` &mdash; Meta-Prompt Generator, Ideation Expander & Multi-Skill Orchestrator
 
-Transforms rough, basic, or informal user ideas into **ultra-detailed, production-ready prompts** that AI coding agents execute flawlessly. Deconstructs what the user *really* needs, proactively expands the scope with creative recommendations, and automatically maps their installed skills and rules into the prompt.
+The master prompt engineering and skill-orchestration engine of the Vanzee suite. Transforms rough, ambiguous, or casual thoughts into **ultra-detailed, production-ready master prompts** that autonomous AI agents execute with surgical precision. 
+
+Deconstructs what the user *really* needs, proactively expands the scope with creative and strategic recommendations, and automatically detects and binds the user's entire installed skill catalog into coherent **Multi-Skill Synergy Recipes**.
 
 ---
 
-## The 3-Step Execution Protocol
+## 🧠 The 4-Stage Prompt Architect Engine
 
-Whenever a user asks to generate, improve, or expand a prompt:
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                       PROMPT ARCHITECT WORKFLOW                             │
+├─────────────────────┬─────────────────────┬─────────────────────────────────┤
+│ 1. Deconstruction   │ 2. Proactive Ideas  │ 3. Multi-Skill Orchestration    │
+│ • Uncover intent    │ • 2-3 High-Value    │ • Map all 16 Vanzee skills      │
+│ • Identify missing  │   recommendations   │ • Inject specialized UI tools   │
+│   edge cases/layers │   user didn't see   │ • Formulate Power Stack recipes │
+├─────────────────────┴─────────────────────┴─────────────────────────────────┤
+│ 4. Master Prompt Synthesis (Anti-Slop Production Blueprint)                 │
+│ • Role & Operating Posture • Functional Specs • Applied Skills Directives   │
+│ • Strict Deny-List Clichés • Design & Security Directives • Deliverables    │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
-### Step 1: Deep Understanding & Ideation Expansion
-Never just rephrase the user's input. First, understand the core problem, then proactively propose **2–3 High-Value Ideas** to make it significantly better:
-> *"Ide dasar lo: [Ringkasan ide].*  
-> *Biar hasilnya jauh lebih keren, maksimal, dan komplit, gw rekomendasiin tambahin poin-poin ini:*  
-> 1. **[Ide Tambahan 1]**: *Penjelasan kenapa ini penting.*  
-> 2. **[Ide Tambahan 2]**: *Penjelasan kenapa ini penting.*  
-> 3. **[Ide Tambahan 3]**: *Penjelasan kenapa ini penting.*"
+### Stage 1: Deep Deconstruction & Scope Clarification
+Never just echo or dress up a raw user prompt. Look beneath the surface:
+1. **Core Business / Technical Objective**: What is the root problem to be solved?
+2. **Missing Architectural Layers**: Did the user forget database schemas, authentication persistence, responsive breakpoints, error boundaries, rate limiting, or input validation?
+3. **Commercial & Regulatory Realities**: Did they miss unit economics, pricing margin structures, licensing (OSS-RBA/BPOM/HKI), or contract terms?
 
-### Step 2: Automatic Skills & Rules Detection
-Scan the prompt's domain and explicitly mandate the AI to activate matching skills:
+### Stage 2: Proactive Ideation (2–3 High-Value Upgrades)
+Before outputting the final prompt, provide **2–3 strategic recommendations**:
+> *"Ide dasar lo: [Ringkasan ide awal]*  
+> *Biar hasilnya jauh lebih keren, maksimal, dan berdaya saing tinggi, gw rekomendasiin tambahin 3 poin krusial ini:*  
+> 1. **[Ide Tambahan 1]**: *Penjelasan kenapa fitur/sudut pandang ini penting.*  
+> 2. **[Ide Tambahan 2]**: *Penjelasan kenapa fitur/sudut pandang ini penting.*  
+> 3. **[Ide Tambahan 3]**: *Penjelasan kenapa fitur/sudut pandang ini penting.*"
 
-| Domain | Matched Skills to Auto-Inject |
-|:-------|:------------------------------|
-| **UI/UX & Frontend** | `evankristanto`, `universal-responsive`, `web-perf-optimizer`, `ui-ux-pro`, `taste-skill` |
-| **Copywriting & Marketing** | `conversion-copywriting`, `social-caption-maker` |
-| **Architecture & Safety** | `deep-think-planner`, `risk-management`, `ponytail` |
-| **Akademik & Humanizer** | `academic-student-support`, `zero-ai-detector`, `humanizer` |
-| **SEO & Performance** | `seo` (agentic-seo), `web-perf-optimizer` |
+### Stage 3: Multi-Skill Auto-Orchestration
+Scan the domain and bind matching skills from the user's master library:
 
-### Step 3: Synthesis of the High-Density Anti-Slop Prompt
+| Domain | Available Skills to Auto-Inject |
+|:-------|:--------------------------------|
+| **Web Craft & Modern UI** | `evankristanto`, `universal-responsive`, `web-perf-optimizer`, `design-taste-frontend`, `animate`, `ui-ux-pro-max`, `theme-factory` |
+| **Backend & Architecture** | `fullstack-developer`, `ponytail`, `deep-think-planner` |
+| **Cybersecurity & Safety** | `cyber-security-auditor`, `risk-management` |
+| **Business, Finance & R&D**| `business-growth-strategist`, `pricing-decision-strategist`, `product-rnd-architect` |
+| **Editorial & Copywriting**| `conversion-copywriting`, `social-caption-maker`, `editorial-article-maker`, `agentic-seo`, `zero-ai-detector`, `humanizer` |
+| **Academic & Pedagogy** | `academic-student-support`, `zero-ai-detector` |
+| **Platform Automation** | `automation`, `generative_ui`, `agy-customizations` |
+
+#### Proven Multi-Skill "Power Stacks":
+- **SaaS Startup MVP**: `fullstack-developer` + `evankristanto` + `cyber-security-auditor` + `pricing-decision-strategist` + `business-growth-strategist`.
+- **F&B / Physical Product Launch**: `product-rnd-architect` + `pricing-decision-strategist` + `conversion-copywriting` + `social-caption-maker`.
+- **Media & Viral Content**: `editorial-article-maker` + `agentic-seo` + `zero-ai-detector` + `social-caption-maker`.
+- **Enterprise Refactoring & Security**: `deep-think-planner` + `cyber-security-auditor` + `risk-management` + `ponytail`.
+
+### Stage 4: Production-Grade Master Prompt Synthesis
 Generate the final prompt in a clean, copyable block using natural, assertive human authority (zero robotic AI preambles):
 
 ```markdown
 ```text
-[ROLE]: Act as a [Senior Principal Engineer / Elite Specialist].
+[ROLE & EXPERTISE]:
+Act as a [Principal Fullstack Architect / Elite Cyber Security Lead / Senior Growth Strategist].
 
-[OBJECTIVE & CONTEXT]:
-[Clear, unambiguous statement of what is being built, why, and target outcome]
+[OBJECTIVE & HIGH-LEVEL GOAL]:
+[Clear, unambiguous statement of what is being built, the target audience, and primary success metric]
 
-[APPLIED SKILLS & RULES]:
-Activate and enforce the following skills: [e.g. evankristanto, universal-responsive]
+[APPLIED SKILLS & DIRECTIVES]:
+Activate and enforce the following installed skills:
+- [skill-name-1]: [Specific reason / scope]
+- [skill-name-2]: [Specific reason / scope]
+- [skill-name-3]: [Specific reason / scope]
 
-[DETAILED SPECIFICATIONS]:
-1. [Core Feature 1]: Exact logic, inputs, outputs, and edge-case behavior.
-2. [Core Feature 2]: Exact logic, inputs, outputs, and edge-case behavior.
-3. [Expanded Ideation Feature]: The proactive features agreed upon.
+[TECHNICAL & FUNCTIONAL SPECIFICATIONS]:
+1. [Core Requirement 1]: Specific input/output, data structures, and edge-case behaviors.
+2. [Core Requirement 2]: Validation, error handling, state management, and persistence.
+3. [Proactive Enhancement]: The expanded feature agreed upon in Stage 2.
 
-[AESTHETIC & ARCHITECTURAL DIRECTIVES] (If UI/Design):
-- 24px border radius, dual-layer elevation, asymmetric bento layout.
-- OKLCH dynamic color adaptation based on brand theme.
-- Container queries (@container) and fluid clamp() typography.
+[DESIGN & ARCHITECTURAL STANDARDS] (If Applicable):
+- Bento Grid geometry: 24px border radiuses, dual-layer elevation, subtle border-white/10.
+- Typography & Spacing: Fluid clamp() mathematics and container queries (@container).
+- Defensive Security: Parameterized queries, sanitization, strict CSP, OWASP Top 10 compliance.
 
 [STRICT ANTI-PATTERNS (DENY-LIST)]:
-- Deny: Generic AI 3-column layouts.
-- Deny: Unhandled errors, inline styles, unescaped DOM rendering.
-- Deny: Conversational filler in code responses.
+- NEVER use generic AI cliches: "delve", "testament", "seamlessly", "in today's fast-paced world".
+- NEVER output unstyled 3-card templates or raw SQL string concatenations.
+- NO conversational filler in code responses.
 
-[OUTPUT FORMAT]:
-[Exact deliverable format required]
+[OUTPUT FORMAT & DELIVERABLES]:
+[Exact file paths, unified diffs, structured report, or single-file deployment instructions]
 ```
 ```
 
 ---
 
-## Anti-Slop Prompting Rules
+## 🚫 Anti-Slop Prompting Rules
 - **No Chatbot Preambles**: Strip all *"Could you kindly please help me to..."* or *"I hope you are doing well"*.
 - **Direct Operational Stance**: Use strong imperatives: `Implement`, `Enforce`, `Eradicate`, `Sanitize`, `Structure`.
-- **Exhaustive Clarity**: The description must leave zero room for the model to guess or hallucinate parameters.
+- **Exhaustive Clarity**: The description must leave zero room for the model to guess, hallucinate parameters, or cut corners.
 
-*Reference: See [`references/prompt-expansion-and-skills-mapping.md`](./references/prompt-expansion-and-skills-mapping.md) for full expansion workflows and skills mapping matrices.*
+---
+
+## 📚 Deep-Dive References
+
+For the complete catalog and expansion templates, consult:
+- [`references/installed-skills-catalog-and-taxonomy.md`](file:///C:/Users/Administrator/.gemini/config/skills/prompt-architect/references/installed-skills-catalog-and-taxonomy.md) &mdash; Directory of all 16 Vanzee Flagship skills + specialized UI/Design skills + Antigravity built-ins with triggers and synergy recipes.
+- [`references/prompt-expansion-and-skills-mapping.md`](file:///C:/Users/Administrator/.gemini/config/skills/prompt-architect/references/prompt-expansion-and-skills-mapping.md) &mdash; The 4-stage expansion workflow, master prompt archetypes, and anti-slop rules.

@@ -1,78 +1,113 @@
 # Prompt Expansion & Skills Auto-Mapping Framework
-
-A systematic engine that transforms rough, ambiguous user thoughts into comprehensive, production-grade prompts that autonomous AI agents execute with zero hallucination.
+> Reference guide for `prompt-architect` — 4-stage expansion protocol, domain routing, and production-grade master prompt synthesis templates.
 
 ---
 
-## 1. The 4-Stage Expansion Protocol
+## 1. The 4-Stage Prompt Architect Engine
 
 ```text
-[STAGE 1: DECONSTRUCTION]   -> Extract core desire, identify unstated goals & technical boundaries.
-[STAGE 2: PROACTIVE IDEATION]-> Suggest 2-3 high-value features or angles the user didn't think of.
-[STAGE 3: SKILLS MATCHING]  -> Scan the user's installed skills & rules to inject exact skill triggers.
-[STAGE 4: PROMPT SYNTHESIS]  -> Assemble the final high-density, anti-slop prompt blueprint.
+[STAGE 1: DECONSTRUCTION]   -> Uncover core intent, missing edge cases, business assumptions & technical limits.
+[STAGE 2: PROACTIVE IDEATION]-> Offer 2-3 high-value features or strategic angles the user didn't think of.
+[STAGE 3: MULTI-SKILL MAP]  -> Auto-detect & inject optimal combination of installed skills (Vanzee + System).
+[STAGE 4: MASTER SYNTHESIS] -> Generate copy-paste ready, high-density, anti-slop operational prompt.
 ```
 
 ---
 
-## 2. Stage Breakdown
+## 2. Detailed Execution Guidelines
 
-### Stage 1: Deconstruct & Understand First
-Never simply copy-paste or reformat a raw user prompt. Look beneath the surface:
-- What is the user *actually* building?
-- What are the missing pieces? (e.g., If they ask for a "login page", did they mention auth state, error handling, session persistence, responsive layout, rate limiting?)
-- What is the target AI agent's role?
+### Stage 1: Deconstruction & Scope Clarification
+Never blindly repeat or dress up a raw prompt. Deconstruct it into first principles:
+- **Core Intent**: What is the root problem the user wants to solve?
+- **Missing Technical Layers**: Did the user forget database schemas, state management, auth token expiration, responsive breakpoints, rate limits, or error handling?
+- **Commercial & Legal Blindspots**: Did they consider unit economics, pricing markup, terms of service, or licensing (OSS-RBA/BPOM)?
 
-### Stage 2: Ideation Expansion (Value-Add Recommendations)
-Before outputting the final prompt, provide **2–3 Proactive Ideas**:
-> *"Ide lo udah bagus, tapi biar hasilnya jauh lebih keren & tahan banting, gw rekomendasiin tambahin fitur ini:*
-> 1. *[Fitur Tambahan 1]: Penjelasan singkat value-nya.*
-> 2. *[Fitur Tambahan 2]: Penjelasan singkat value-nya.*
-> 3. *[Fitur Tambahan 3]: Penjelasan singkat value-nya."*
+### Stage 2: Proactive Ideation (2–3 High-Value Upgrades)
+Before outputting the final prompt, present **2–3 strategic recommendations**:
+> *"Ide lo: [Ringkasan ide awal]*  
+> *Biar hasilnya jauh lebih maksimal, tahan banting, dan berdaya saing tinggi, gw rekomendasikan tambahin 3 poin krusial ini:*  
+> 1. **[Ide Tambahan 1]**: *Penjelasan kenapa fitur/sudut pandang ini penting.*  
+> 2. **[Ide Tambahan 2]**: *Penjelasan kenapa fitur/sudut pandang ini penting.*  
+> 3. **[Ide Tambahan 3]**: *Penjelasan kenapa fitur/sudut pandang ini penting.*"
 
-### Stage 3: Skills & Rules Auto-Mapping Directory
-The prompt generator automatically scans the user's environment and embeds explicit instructions to utilize available skills:
+### Stage 3: Skills Auto-Mapping & Recipe Assembly
+Scan the domain and auto-inject matching skills from [`references/installed-skills-catalog-and-taxonomy.md`](./installed-skills-catalog-and-taxonomy.md):
 
-| Domain | When Prompt Involves... | Auto-Inject These Skills |
-|:-------|:------------------------|:-------------------------|
-| **UI/UX & Frontend** | Dashboard, landing page, cards, components, aesthetics | `evankristanto`, `universal-responsive`, `web-perf-optimizer`, `ui-ux-pro`, `taste-skill` |
-| **Copywriting & Growth** | Landing page text, value props, sales pitch, social caption | `conversion-copywriting`, `social-caption-maker` |
-| **Logic & Safety** | Architecture, refactoring, database changes, migrations | `deep-think-planner`, `risk-management`, `ponytail` |
-| **Academic & Writing** | Makalah, paper, skripsi, esai, tugas kuliah, humanizer | `academic-student-support`, `zero-ai-detector`, `humanizer` |
-| **Marketing & SEO** | SEO audit, meta tags, schema markup, Core Web Vitals | `seo` (agentic-seo), `web-perf-optimizer` |
+| Domain | Matching Skill Triggers |
+|:-------|:------------------------|
+| **Web Craft & Aesthetics** | `evankristanto`, `universal-responsive`, `web-perf-optimizer`, `design-taste-frontend`, `animate`, `ui-ux-pro-max` |
+| **Backend & Architecture** | `fullstack-developer`, `ponytail`, `deep-think-planner` |
+| **Security & Auditing** | `cyber-security-auditor`, `risk-management` |
+| **Commercial, Pricing & R&D**| `business-growth-strategist`, `pricing-decision-strategist`, `product-rnd-architect` |
+| **Content, Copy & Viral Growth**| `conversion-copywriting`, `social-caption-maker`, `editorial-article-maker`, `agentic-seo`, `zero-ai-detector` |
+| **Academic & Pedagogy** | `academic-student-support`, `zero-ai-detector`, `humanizer` |
+| **Platform Automation** | `automation`, `generative_ui`, `agy-customizations` |
 
-### Stage 4: High-Density Prompt Synthesis Architecture
-The generated prompt must follow this structured, anti-slop blueprint:
+### Stage 4: Production-Grade Master Prompt Synthesis
+Generate the finalized prompt inside a dedicated, copyable markdown block following this standard architecture:
 
 ```markdown
-### 🎯 ROLE & OPERATING POSTURE
-[Clear expert role, e.g. Senior Full-Stack Architect / Elite Conversion Copywriter]
+```text
+[ROLE & EXPERTISE]:
+Act as a [Principal Fullstack Architect / Elite Cyber Security Lead / Senior Growth Strategist].
 
-### 📌 GOAL & CONTEXT
-[Crystal-clear summary of what is being built, why, and for whom]
+[OBJECTIVE & HIGH-LEVEL GOAL]:
+[Clear, unambiguous statement of what is being built, the target audience, and primary success metric]
 
-### ⚡ APPLIED SKILLS & RULES
-[Explicit list of matched skills to activate: e.g. evankristanto, universal-responsive]
+[APPLIED SKILLS & DIRECTIVES]:
+Activate and enforce the following installed skills:
+- [skill-name-1]: [Specific reason / scope]
+- [skill-name-2]: [Specific reason / scope]
+- [skill-name-3]: [Specific reason / scope]
 
-### 🛠️ FUNCTIONAL SPECIFICATIONS & REQUIREMENTS
-- Requirement 1: Concrete detail with boundary rules.
-- Requirement 2: Concrete detail with boundary rules.
+[TECHNICAL & FUNCTIONAL SPECIFICATIONS]:
+1. [Core Requirement 1]: Specific input/output, data structures, and edge-case behaviors.
+2. [Core Requirement 2]: Validation, error handling, state management, and persistence.
+3. [Proactive Enhancement]: The expanded feature agreed upon in Stage 2.
 
-### 🎨 DESIGN & AESTHETIC DIRECTIVES (If UI)
-[Asymmetric Bento, OKLCH dynamic tokens, 24px radius, anti-AI slop]
+[DESIGN & ARCHITECTURAL STANDARDS] (If Applicable):
+- Bento Grid geometry: 24px border radiuses, dual-layer elevation, subtle border-white/10.
+- Typography & Spacing: Fluid clamp() mathematics and container queries (@container).
+- Defensive Security: Parameterized queries, sanitization, strict CSP, OWASP Top 10 compliance.
 
-### 🚫 STRICT ANTI-PATTERNS & DENY-LIST
-- Deny: Generic AI 3-column layouts.
-- Deny: Unhandled edge cases, inline styling, un-sanitized inputs.
+[STRICT ANTI-PATTERNS (DENY-LIST)]:
+- NEVER use generic AI cliches: "delve", "testament", "seamlessly", "in today's fast-paced world".
+- NEVER output unstyled 3-card templates or raw SQL string concatenations.
+- NO conversational filler in code responses.
 
-### 📦 EXACT DELIVERABLE FORMAT
-[Single-file code, modular components, or structured markdown output]
+[OUTPUT FORMAT & DELIVERABLES]:
+[Exact file paths, unified diffs, structured report, or single-file deployment instructions]
+```
 ```
 
 ---
 
-## 3. Strict Anti-Slop Language Rules
+## 3. Master Prompt Archetypes
 
-1. **Natural Human Authority**: Write prompts that sound like a senior tech lead delegating to a principal engineer—sharp, direct, confident, zero artificial filler.
-2. **No Robot Cliches**: Ban phrases like *"Please make sure to...", "I would like you to kindly...", "In order to ensure maximum excellence..."*.
-3. **Assertive Directives**: Use direct action verbs: `Build`, `Implement`, `Enforce`, `Eradicate`, `Sanitize`.
+### Archetype A: Fullstack SaaS Application
+```text
+Role: Senior Principal Fullstack Systems Architect
+Skills Injected: fullstack-developer, evankristanto, cyber-security-auditor, universal-responsive
+Focus: Clean Architecture, Next.js RSC, PostgreSQL UUIDv7 schema, row-level locking, OWASP Top 10 defense, and tactile modern Bento UI.
+```
+
+### Archetype B: Cyber Security Code Audit & Remediation
+```text
+Role: Elite Lead Security Auditor & DevSecOps Engineer
+Skills Injected: cyber-security-auditor, risk-management, ponytail
+Focus: Source-to-sink data flow tracing, CWE/OWASP mapping, deterministic CVSS v3.1 vector calculation, dual-lens remediation (ELI5 layman analogy + drop-in unified git diff), and defensive negative unit tests.
+```
+
+### Archetype C: Product Formulation & Commercial Pricing
+```text
+Role: Chief Product Officer & CFO Dual-Lens Commercial Strategist
+Skills Injected: product-rnd-architect, pricing-decision-strategist, business-growth-strategist
+Focus: Ingredient percentage formulation, ASLT Arrhenius shelf-life testing, BPOM MD/Halal checkpoints, true HPP/COGS breakdown, and 3-tier markup decision matrix with retail waterfall margin simulation.
+```
+
+### Archetype D: Publication-Grade Journalism & SEO Blog
+```text
+Role: Senior Editorial Journalist & Technical SEO Director
+Skills Injected: editorial-article-maker, agentic-seo, zero-ai-detector, social-caption-maker
+Focus: Inverted pyramid newsroom structure (5W+1H lede, nut graph, future kicker), featured snippet direct-answer blocks (45 words), 3-sentence mobile paragraph rhythm, schema-ready FAQs, and zero AI cliches.
+```

@@ -542,7 +542,8 @@ vanzee-skills/
 │   ├── prompt-architect/
 │   │   ├── SKILL.md
 │   │   └── references/
-│   │       └── prompt-expansion-and-skills-mapping.md # 4-stage expansion protocol, skill directory & anti-slop rules
+│   │       ├── installed-skills-catalog-and-taxonomy.md # Master catalog of all 16 skills, UI tools & synergy stacks
+│   │       └── prompt-expansion-and-skills-mapping.md   # 4-stage expansion protocol, archetypes & anti-slop rules
 │   ├── business-growth-strategist/
 │   │   ├── SKILL.md
 │   │   └── references/

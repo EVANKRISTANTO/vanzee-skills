@@ -64,24 +64,26 @@ $AllSkills = @(
     @{ Id = 12; Name = 'fullstack-developer';    Desc = 'Frontend RSC, Clean Architecture API, Postgres & Docker'; Tag = 'FSK' },
     @{ Id = 13; Name = 'product-rnd-architect';   Desc = 'F&B, Physical & Cosmetics R&D Formulation, Shelf-Life'; Tag = 'RND' },
     @{ Id = 14; Name = 'pricing-decision-strategist'; Desc = 'CMO & CFO Dual-Lens Markup & Margin Decision Engine'; Tag = 'PRC' },
-    @{ Id = 15; Name = 'editorial-article-maker'; Desc = 'Anti-AI Journalism, SEO Pillar Articles & News'; Tag = 'ART' }
+    @{ Id = 15; Name = 'editorial-article-maker'; Desc = 'Anti-AI Journalism, SEO Pillar Articles & News'; Tag = 'ART' },
+    @{ Id = 16; Name = 'cyber-security-auditor'; Desc = 'CVE/CWE Audit, Source-to-Sink, CVSS v3.1 & Patch Engine'; Tag = 'SEC' }
 )
 
 Write-Host "+-- [2/4] Choose Installation Mode ------------------------------------+" -ForegroundColor White
-Write-Host "|  [A] Full Flagship Suite (All 15 Skills)                  [DEFAULT]  |" -ForegroundColor Green
+Write-Host "|  [A] Full Flagship Suite (All 16 Skills)                  [DEFAULT]  |" -ForegroundColor Green
 Write-Host "|  [1] Web & Fullstack Pack      (evankristanto, fullstack, perf, resp) |" -ForegroundColor Cyan
 Write-Host "|  [2] Growth & Marketing Pack   (copywriting, caption, zero-ai, art)  |" -ForegroundColor Cyan
 Write-Host "|  [3] Deep Reasoning & Prompts  (deep-think, risk, prompt-architect)  |" -ForegroundColor Cyan
 Write-Host "|  [4] Academic & Student Pack   (academic-support, zero-ai)           |" -ForegroundColor Cyan
 Write-Host "|  [5] Enterprise & Business Pack(business-growth, risk, copywriting)   |" -ForegroundColor Cyan
 Write-Host "|  [6] Product R&D & Pricing Pack(product-rnd, pricing-decision, business)|" -ForegroundColor Cyan
-Write-Host "|  [C] Custom Selection          (Pilih nomor skill manual 1-15)       |" -ForegroundColor Yellow
+Write-Host "|  [7] Security & DevSecOps Pack (cyber-security, risk, fullstack)      |" -ForegroundColor Cyan
+Write-Host "|  [C] Custom Selection          (Pilih nomor skill manual 1-16)       |" -ForegroundColor Yellow
 Write-Host "+-----------------------------------------------------------------------+" -ForegroundColor White
 
 $choice = $Preset
 if ([string]::IsNullOrWhiteSpace($choice)) {
     Write-Host ""
-    $choice = Read-Host "Pilih preset yang mau di-install [A/1/2/3/4/5/6/C] (Tekan ENTER untuk Semua)"
+    $choice = Read-Host "Pilih preset yang mau di-install [A/1/2/3/4/5/6/7/C] (Tekan ENTER untuk Semua)"
     if ([string]::IsNullOrWhiteSpace($choice)) { $choice = 'A' }
 }
 
@@ -112,6 +114,10 @@ switch ($choice.ToUpper().Trim()) {
         $chosenSkillNames = @('product-rnd-architect', 'pricing-decision-strategist', 'business-growth-strategist')
         Write-Host "`n> Mode Dipilih: [6] Product R&D & Pricing Pack" -ForegroundColor Cyan
     }
+    '7' {
+        $chosenSkillNames = @('cyber-security-auditor', 'risk-management', 'fullstack-developer')
+        Write-Host "`n> Mode Dipilih: [7] Security & DevSecOps Pack" -ForegroundColor Cyan
+    }
     'C' {
         Write-Host ""
         Write-Host "+-- DAFTAR SKILL TERSEDIA ----------------------------------------------+" -ForegroundColor Yellow
@@ -140,7 +146,7 @@ switch ($choice.ToUpper().Trim()) {
     }
     Default {
         $chosenSkillNames = $AllSkills | ForEach-Object { $_.Name }
-        Write-Host "`n> Mode Dipilih: [A] Full Flagship Suite (Semua 15 Skill)" -ForegroundColor Green
+        Write-Host "`n> Mode Dipilih: [A] Full Flagship Suite (Semua 16 Skill)" -ForegroundColor Green
     }
 }
 
@@ -240,6 +246,7 @@ foreach ($sn in $chosenSkillNames) {
         'product-rnd-architect'   { Write-Host "  * Product R&D:   'Formulasi produk minuman RTD dan uji shelf life pakai product-rnd-architect'" -ForegroundColor Magenta }
         'pricing-decision-strategist'{ Write-Host "  * Pricing Strat: 'Analisis markup harga dan HPP dual-lens CMO-CFO pakai pricing-decision-strategist'" -ForegroundColor Magenta }
         'editorial-article-maker' { Write-Host "  * Editorial Art: 'Tulis artikel berita mendalam dan SEO friendly pakai editorial-article-maker'" -ForegroundColor Magenta }
+        'cyber-security-auditor'  { Write-Host "  * Security Audit:'Audit celah keamanan kode, hitung CVSS, dan buat patch pakai cyber-security-auditor'" -ForegroundColor Magenta }
     }
 }
 Write-Host ""

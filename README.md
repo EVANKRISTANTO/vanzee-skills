@@ -23,7 +23,7 @@
 [![Anti-AI Slop](https://img.shields.io/badge/Aesthetic-Anti--AI_Slop-FF5B61.svg?style=for-the-badge)](#-the-anti-slop-manifesto)
 [![Multi-Agent](https://img.shields.io/badge/Compatible-Antigravity_|_Claude_|_Codex_|_Cursor-00F0FF.svg?style=for-the-badge)](#-one-line-installation)
 
-[Karya Anak Bangsa](#-karya-anak-bangsa-the-indonesian-engineering-pride) • [The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 15 Flagship Skills](#-the-15-flagship-skills) • [The Rules Suite](#-the-rules-suite) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
+[Karya Anak Bangsa](#-karya-anak-bangsa-the-indonesian-engineering-pride) • [The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 16 Flagship Skills](#-the-16-flagship-skills) • [The Rules Suite](#-the-rules-suite) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
 
 ---
 
@@ -53,7 +53,7 @@ Most AI coding agents write code that works, but looks and reads like an uninspi
 
 ---
 
-## ⚡ The 15 Flagship Skills
+## ⚡ The 16 Flagship Skills
 
 ```text
 vanzee-skills/
@@ -72,7 +72,8 @@ vanzee-skills/
 │   ├── academic-student-support/# 🎓 Dual-Output Academic Mastery (TK to S3, 6 College Papers, Oral Defense)
 │   ├── prompt-architect/        # 📐 Meta-Prompt Generator, Ideation Expander & Skills Auto-Mapper
 │   ├── business-growth-strategist/# 💼 Corporate Finance, OSS-RBA Licensing & Profit Engine
-│   └── editorial-article-maker/# 📰 Anti-AI Journalism, SEO Pillar Articles & Newsroom Engine
+│   ├── editorial-article-maker/# 📰 Anti-AI Journalism, SEO Pillar Articles & Newsroom Engine
+│   └── cyber-security-auditor/ # 🛡️ CVE/CWE Audit, Source-to-Sink, CVSS v3.1 & Patch Engine
 ```
 
 ---
@@ -231,6 +232,17 @@ vanzee-skills/
 * **Featured Snippet Direct-Answer Blocks**: Automatically crafts 40–50 word direct definitions under H2 queries, 3-sentence maximum mobile paragraph limits, and schema-ready FAQ blocks for Google and AI search engines (Perplexity, ChatGPT).
 * **Zero Robotic AI Cadence**: Permanently bans generic tropes (*delve, testament, tapestry, in today's fast-paced world, in conclusion*); enforces a 3-sentence rhythmic wave (punchy 5-word hit, explanatory 18-word bridge, balanced 12-word conclusion) with concrete nouns and active verbs.
 * **Standard 3-Part Delivery Package**: Delivers every piece with (1) Metadata Package (Title <60 char, Meta Description <155 char, URL Slug, Primary/Secondary/LSI keywords), (2) The Full Editorial Body (H1–H3 hierarchy, callouts, pull quotes), and (3) Visual Direction & Social Distribution Angles (IG, X, Threads).
+
+---
+
+### 🛡️ 16. `cyber-security-auditor` &mdash; Cybersecurity Code Auditor & Vulnerability Reporting Engine
+> *Multi-language defensive security intelligence engine across PHP, JavaScript/TypeScript, Python, Go, Java, Rust, and C/C++. Performs source-to-sink vulnerability auditing, CWE/OWASP mapping, deterministic CVSS v3.1 scoring, and production patch generation.*
+
+* **Multi-Language Source-to-Sink Auditing**: Tracks untrusted user input across controllers, filters, and vulnerable sinks (RCE via `shell_exec`/`system`, SQLi in raw queries, prototype pollution, SSRF to cloud metadata, insecure deserialization POP chains, and memory overflows).
+* **Deterministic CVSS v3.1 Scoring Engine**: Formulates exact CVSS base scores (0.0–10.0) with full vector strings (`CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`) across Critical, High, Medium, and Low severity tiers.
+* **Universal Threat Taxonomy**: Cross-references findings against official CWE IDs (`CWE-78`, `CWE-89`, `CWE-918`, `CWE-639`) and OWASP Top 10:2021 classifications.
+* **Production Patch & Verification Engineering**: Provides unified before/after git diff code patches, defense-in-depth isolation rules (least privilege, WAF rules), and defensive unit test checklists without weaponized exploit payloads.
+* **Dual Output Modes**: Formats results as an Enterprise Security Advisory Report or a Social Security Alert Card (carousel format with alert badges, affected versions, and urgent remediation steps like the IDCloudHost advisory).
 
 ---
 
@@ -446,6 +458,15 @@ Tolong buatkan:
 3. Paket SEO lengkap: Meta Title (<60 char), Meta Description (<155 char), URL slug, primary/LSI keywords, dan schema-ready FAQ.
 4. Rekomendasi angle visual infografis dan hook distribusi medsos (X/Twitter thread & LinkedIn editorial)."
 ```
+<!-- slide -->
+### 🛡️ Cybersecurity Vulnerability Audit & CVSS Scoring
+```text
+"Audit kode controller autentikasi dan API endpoint ini pakai skill cyber-security-auditor:
+1. Telusuri alur data source-to-sink dan identifikasi potensi celah RCE, SQLi, atau IDOR.
+2. Petakan ke CWE, OWASP Top 10, dan hitung skor CVSS v3.1 akurat lengkap dengan vector string.
+3. Berikan patch code perbaikan konkret (unified git diff) untuk mitigasi celah tersebut.
+4. Buatkan laporan Security Advisory resmi serta kartu peringatan medsos (gaya IDCloudHost security warning)."
+```
 ````
 
 ---
@@ -526,12 +547,18 @@ vanzee-skills/
 │   │       ├── financial-engineering-and-unit-economics.md # CAC/LTV, CCC, burn rate, pricing power & 3-case models
 │   │       ├── legal-licensing-and-compliance.md           # PT/CV, OSS-RBA, KBLI, HKI, Halal, BPOM, Tax PP 55/2022
 │   │       └── growth-strategy-and-profit-maximization.md   # Best-Option matrix, GTM, moats, bootstrapping vs VC
-│   └── editorial-article-maker/
+│   ├── editorial-article-maker/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── journalism-and-news-writing.md        # Inverted pyramid, 5W+1H lede, nut graph & attribution
+│   │       ├── seo-blog-and-pillar-architecture.md   # Search intent, featured snippet boxes & mobile rhythm
+│   │       └── anti-ai-voice-and-human-cadence.md    # Banned AI tropes, 3-sentence wave & sensory grounding
+│   └── cyber-security-auditor/
 │       ├── SKILL.md
 │       └── references/
-│           ├── journalism-and-news-writing.md        # Inverted pyramid, 5W+1H lede, nut graph & attribution
-│           ├── seo-blog-and-pillar-architecture.md   # Search intent, featured snippet boxes & mobile rhythm
-│           └── anti-ai-voice-and-human-cadence.md    # Banned AI tropes, 3-sentence wave & sensory grounding
+│           ├── cvss-scoring-and-vulnerability-taxonomy.md # CVSS v3.1 metrics, CWE Top 25 & OWASP mapping
+│           ├── multi-language-vulnerability-patterns.md   # Multi-language sinks & patches (PHP, JS, Py, Go, etc.)
+│           └── security-audit-report-template.md          # Enterprise advisory & social warning card templates
 ├── rules/
 │   ├── 01-anti-slop-web-craft.md                # Modern Bento UI, clamp() math, Core Web Vitals & OWASP Top 10
 │   ├── 02-anti-ai-voice.md                      # Banned AI N-grams, dynamic burstiness & high perplexity

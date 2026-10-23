@@ -102,13 +102,14 @@ echo -e "${BOLD}${WHITE}╰─────────────────�
 
 # --- Step 2: Interactive Skill Selection ---
 echo -e "${BOLD}${WHITE}╭── [2/4] Choose Installation Mode ────────────────────────────────────╮${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${GREEN}[A] Full Flagship Suite (All 12 Skills)                  [DEFAULT]${RESET}  ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${GREEN}[A] Full Flagship Suite (All 14 Skills)                  [DEFAULT]${RESET}  ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[1] Web & Fullstack Pack      (evankristanto, fullstack, perf, resp) ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[2] Growth & Marketing Pack   (copywriting, caption, zero-ai)      ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[3] Deep Reasoning & Prompts  (deep-think, risk, prompt-architect) ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[4] Academic & Student Pack   (academic-support, zero-ai)          ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[5] Enterprise & Business Pack(business-growth, risk, copywriting) ${RESET} ${BOLD}${WHITE}│${RESET}"
-echo -e "${BOLD}${WHITE}│${RESET}  ${YELLOW}[C] Custom Selection          (Pilih nomor skill manual 1-12)      ${RESET} ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${CYAN}[6] Product R&D & Pricing Pack(product-rnd, pricing-decision, biz) ${RESET} ${BOLD}${WHITE}│${RESET}"
+echo -e "${BOLD}${WHITE}│${RESET}  ${YELLOW}[C] Custom Selection          (Pilih nomor skill manual 1-14)      ${RESET} ${BOLD}${WHITE}│${RESET}"
 echo -e "${BOLD}${WHITE}╰───────────────────────────────────────────────────────────────────────╯${RESET}\n"
 
 ALL_SKILL_NAMES=(
@@ -124,9 +125,11 @@ ALL_SKILL_NAMES=(
   "prompt-architect"
   "business-growth-strategist"
   "fullstack-developer"
+  "product-rnd-architect"
+  "pricing-decision-strategist"
 )
 
-read -r -p "Pilih preset yang mau di-install [A/1/2/3/4/5/C] (Tekan ENTER untuk Semua): " USER_CHOICE || USER_CHOICE="A"
+read -r -p "Pilih preset yang mau di-install [A/1/2/3/4/5/6/C] (Tekan ENTER untuk Semua): " USER_CHOICE || USER_CHOICE="A"
 USER_CHOICE="${USER_CHOICE:-A}"
 
 CHOSEN_SKILLS=()
@@ -152,6 +155,10 @@ case "${USER_CHOICE^^}" in
     CHOSEN_SKILLS=("business-growth-strategist" "risk-management" "conversion-copywriting")
     echo -e "\n${CYAN}➜ Mode Dipilih: [5] Enterprise & Business Pack${RESET}"
     ;;
+  6)
+    CHOSEN_SKILLS=("product-rnd-architect" "pricing-decision-strategist" "business-growth-strategist")
+    echo -e "\n${CYAN}➜ Mode Dipilih: [6] Product R&D & Pricing Pack${RESET}"
+    ;;
   C)
     echo -e "\n${YELLOW}╭── DAFTAR SKILL TERSEDIA ──────────────────────────────────────────────╮${RESET}"
     echo -e "${YELLOW}│${RESET}  [1] [WEB] evankristanto           - Token Compaction, Bento/Aura UI"
@@ -166,6 +173,8 @@ case "${USER_CHOICE^^}" in
     echo -e "${YELLOW}│${RESET}  [10] [PRM] prompt-architect      - Meta-Prompt Generator, Idea Expander"
     echo -e "${YELLOW}│${RESET}  [11] [BIZ] business-growth-strategist - Unit Economics, Licensing (OSS/PT), Profit"
     echo -e "${YELLOW}│${RESET}  [12] [FSK] fullstack-developer   - Frontend RSC, Clean API, Postgres & Docker"
+    echo -e "${YELLOW}│${RESET}  [13] [RND] product-rnd-architect - F&B, Physical & Cosmetics R&D Formulation"
+    echo -e "${YELLOW}│${RESET}  [14] [PRC] pricing-decision-strategist - CMO & CFO Dual-Lens Markup & Margin"
     echo -e "${YELLOW}╰───────────────────────────────────────────────────────────────────────╯${RESET}\n"
     read -r -p "Ketik nomor skill yang mau dipasang (contoh: 1 3 5 8): " CUSTOM_NUMS || CUSTOM_NUMS=""
     if [ -z "$CUSTOM_NUMS" ]; then
@@ -182,7 +191,7 @@ case "${USER_CHOICE^^}" in
     ;;
   *)
     CHOSEN_SKILLS=("${ALL_SKILL_NAMES[@]}")
-    echo -e "\n${GREEN}➜ Mode Dipilih: [A] Full Flagship Suite (Semua 12 Skill)${RESET}"
+    echo -e "\n${GREEN}➜ Mode Dipilih: [A] Full Flagship Suite (Semua 14 Skill)${RESET}"
     ;;
 esac
 
@@ -285,6 +294,8 @@ for sn in "${CHOSEN_SKILLS[@]}"; do
     prompt-architect)        echo -e "  ${PURPLE}• Prompt Gen:${RESET}     ${DIM}\"Bagusin dan kembangkan ide prompt ini pakai prompt-architect\"${RESET}" ;;
     business-growth-strategist)echo -e "  ${PURPLE}• Business Adv:${RESET}   ${DIM}\"Analisis kelayakan bisnis, margin profit, dan izin OSS pakai business-growth-strategist\"${RESET}" ;;
     fullstack-developer)       echo -e "  ${PURPLE}• Fullstack:${RESET}      ${DIM}\"Bangun REST API / tRPC dan frontend Next.js pakai fullstack-developer\"${RESET}" ;;
+    product-rnd-architect)     echo -e "  ${PURPLE}• Product R&D:${RESET}    ${DIM}\"Formulasi produk minuman RTD dan uji shelf life pakai product-rnd-architect\"${RESET}" ;;
+    pricing-decision-strategist)echo -e "  ${PURPLE}• Pricing Strat:${RESET}  ${DIM}\"Analisis markup harga dan HPP dual-lens CMO-CFO pakai pricing-decision-strategist\"${RESET}" ;;
   esac
 done
 

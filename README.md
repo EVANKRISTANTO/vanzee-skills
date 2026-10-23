@@ -9,23 +9,36 @@
   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝╚══════╝    ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚══════╝
 ```
 
-### **The Definitive Web Craft, Design Intelligence & Growth Suite for Autonomous AI Coding Agents**
+### **The Definitive Web Craft, Design Intelligence, R&D & Growth Suite for Autonomous AI Coding Agents**
+#### 🇮🇩 *Karya Anak Bangsa — Proudly Engineered in Indonesia for Global Impact*
 
-*Stop accepting generic AI output. Turn your AI assistant into an elite design engineer, defensive security architect, performance specialist, and conversion copywriter.*
+*Stop accepting generic AI output. Turn your AI assistant into an elite design engineer, defensive security architect, fullstack systems builder, product formulator, and commercial strategist.*
 
 ---
 
+[![Karya Anak Bangsa](https://img.shields.io/badge/🇮🇩_Karya_Anak_Bangsa-Proudly_Indonesian-FF0000.svg?style=for-the-badge)](#-karya-anak-bangsa-the-indonesian-engineering-pride)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Agent Skills Standard](https://img.shields.io/badge/Agent_Skills-Open_Standard-8B5CF6.svg?style=for-the-badge)](https://agenticskills.io)
 [![Lighthouse Score](https://img.shields.io/badge/Lighthouse-100%2F100-00E676.svg?style=for-the-badge)](#-3-web-perf-optimizer--ultra-lightweight-speed--core-web-vitals)
 [![Anti-AI Slop](https://img.shields.io/badge/Aesthetic-Anti--AI_Slop-FF5B61.svg?style=for-the-badge)](#-the-anti-slop-manifesto)
 [![Multi-Agent](https://img.shields.io/badge/Compatible-Antigravity_|_Claude_|_Codex_|_Cursor-00F0FF.svg?style=for-the-badge)](#-one-line-installation)
 
-[The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 12 Flagship Skills](#-the-12-flagship-skills) • [The Rules Suite](#-the-rules-suite) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
+[Karya Anak Bangsa](#-karya-anak-bangsa-the-indonesian-engineering-pride) • [The Manifesto](#-the-anti-slop-manifesto) • [One-Line Install](#-one-line-installation) • [The 14 Flagship Skills](#-the-14-flagship-skills) • [The Rules Suite](#-the-rules-suite) • [Prompt Playbook](#-interactive-prompt-playbook) • [License](#-license)
 
 ---
 
 </div>
+
+## 🇮🇩 Karya Anak Bangsa: The Indonesian Engineering Pride
+
+`vanzee-skills` lahir dari keyakinan teguh bahwa **kualitas rekayasa kecerdasan artifisial karya anak bangsa Indonesia mampu memimpin dan bersaing di panggung teknologi global**.
+
+Alih-alih sekadar menjadi konsumen AI, kami membangun standar otonom terlengkap yang memadukan rekayasa perangkat lunak modern, formulasi produk fisik/F&B, dan navigasi komersial berdaya saing tinggi:
+- ⚡ **Standar Global Tanpa Kompromi**: Arsitektur Fullstack modern (Next.js RSC, Clean Architecture, Postgres), Sub-second LCP (100/100 Lighthouse), Bento UI, dan pertahanan keamanan OWASP Top 10.
+- 🎯 **Rigor Industri & Regulasi Riil**: Mengintegrasikan kepatuhan perizinan berusaha OSS-RBA, KBLI 2020, perlindungan HKI DJKI *first-to-file*, regulasi P-IRT vs BPOM MD/NA, sertifikasi Halal BPJPH, hingga perhitungan markup dual-lens CMO-CFO.
+- 🚀 **Eradikasi AI Slop**: Mengharamkan basa-basi dan kata klise generik, menggantinya dengan formula matematis, spesifikasi sensorik presisi, dan rencana aksi konkret.
+
+---
 
 ## 💥 The Anti-Slop Manifesto
 
@@ -40,7 +53,7 @@ Most AI coding agents write code that works, but looks and reads like an uninspi
 
 ---
 
-## ⚡ The 12 Flagship Skills
+## ⚡ The 14 Flagship Skills
 
 ```text
 vanzee-skills/
@@ -49,6 +62,8 @@ vanzee-skills/
 │   ├── fullstack-developer/    # ⚡ End-to-End Systems, Next.js RSC, Clean API, Postgres & Docker
 │   ├── universal-responsive/    # 📱 Multi-Device Layout Engine (Container Queries, clamp(), Foldable to 4K)
 │   ├── web-perf-optimizer/      # 🚀 Sub-Second LCP, Zero CLS, Sub-50ms INP, Next-Gen Asset Diet
+│   ├── product-rnd-architect/   # 🧪 Industrial R&D Engine (F&B Formulation, Shelf-Life, BPOM & Scale-Up)
+│   ├── pricing-decision-strategist/# 💰 CMO & CFO Dual-Lens Markup Engine, HPP & Break-Even Math
 │   ├── conversion-copywriting/  # 🎯 Anti-AI Human Voice, B2B Enterprise Copy, Objection Annihilation
 │   ├── social-caption-maker/    # 🔥 Viral Social Media Hooks, Social SEO & Gen Z Engagement Engine
 │   ├── risk-management/         # 🛡️ Proactive Risk Forecasting, 5x5 Matrix, Pre-Mortem & Rollback
@@ -184,6 +199,27 @@ vanzee-skills/
 * **Clean Architecture & Scalable APIs**: Layered modularity (Controllers -> Use Cases -> Repositories), semantic RESTful endpoints with cursor pagination, type-safe tRPC, and BullMQ background workers with retry backoffs.
 * **Database Engineering & Concurrency**: PostgreSQL schema design (3NF, UUIDv7 primary keys, composite B-Tree indexes, partial indexes), atomic updates, row-level locks (`SELECT FOR UPDATE`), and Redis Cache-Aside.
 * **DevOps & Security Hardening**: Non-root multi-stage Dockerfiles, silent JWT refresh token rotation with HttpOnly cookies, RBAC authorization, and automated testing pyramid (Vitest + Playwright).
+
+---
+
+### 🧪 13. `product-rnd-architect` &mdash; Industrial R&D Engine & Product Formulation
+> *End-to-end Research & Development (R&D) engine across F&B (food, beverage, shelf-life, flavors), cosmetics/skincare, and physical consumer products with zero kitchen-recipe guesswork.*
+
+* **Scientific Formulation Architecture**: Itemized Bill of Materials (BOM) with exact metric percentages, active concentrations, water activity ($a_w$), Brix-to-Acid ratios, and natural masking systems.
+* **Competitor Gap & Sensory Radar**: Systematic breakdown of competitor flaws, sensory radar mapping (Aroma, Mouthfeel, Taste Balance, Finish, Aftertaste), and blind triangle testing protocols.
+* **Shelf-Life & Packaging Barriers**: Accelerated Shelf Life Testing (ASLT) via Arrhenius $Q_{10}$ kinetics, hurdle preservation technology (pH $< 4.2$, thermal pasteurization/retort), and OTR/WVTR barrier film selection.
+* **Regulatory Compliance & Scale-Up**: Indonesian P-IRT vs BPOM MD/NA qualification, Halal BPJPH certification checkpoints, and 4-stage scale-up roadmaps (lab bench -> pilot batch -> toll manufacturing maklon SLA).
+
+---
+
+### 💰 14. `pricing-decision-strategist` &mdash; CMO & CFO Dual-Lens Markup & Margin Engine
+> *Reconciles the customer acquisition aggression of a Chief Marketing Officer (CMO) with the fiscal survival discipline of a Chief Financial Officer (CFO) to formulate bulletproof pricing.*
+
+* **Mathematical Precision & True COGS**: Unpacks true HPP (raw materials, packaging, maklon fees, inbound freight, scrap/waste allowance) and eliminates the fatal markup-vs-margin confusion.
+* **The 3-Tier Markup Decision Matrix**: Models and compares Volume Penetration (1.8x COGS), Sweet Spot Target (2.8x–3.5x COGS), and Premium Skimming (4.5x–6.0x COGS) with unit contribution margins.
+* **CMO vs CFO Reconciled Assessment**: Evaluates allowable CAC headroom on Meta/TikTok ads against working capital inventory drag, cash conversion cycles (CCC), and supplier inflation cushions.
+* **Multi-Tier Retail Stacking**: Calculates full channel waterfall margins for modern trade retail (Distributor 15%–20%, Retailer 30%–35%) before launch to prevent negative net cash realization.
+* **Consumer Psychology & Decoy Bundling**: Implements charm pricing (`.900`) vs prestige round pricing (`.000`) and asymmetrical 3-tier decoy packaging (Starter -> Hero 3-Pack -> VIP Anchor).
 
 ---
 
@@ -369,6 +405,26 @@ Bantu rekomendasikan:
 3. Database: Skema PostgreSQL Drizzle dengan UUIDv7, indeks komposit, dan row-level locking.
 4. Testing: Buat 1 unit test Vitest untuk kalkulasi diskon dan 1 integration test API."
 ```
+<!-- slide -->
+### 🧪 Industrial Product R&D & Formulation
+```text
+"Bantu riset & pengembangan produk minuman kopi susu oat siap minum (RTD) dalam kemasan kaleng pakai skill product-rnd-architect.
+Tolong buatkan:
+1. Analisis komparasi kelemahan 2 kompetitor utama di minimarket Indonesia.
+2. Formulasi master (persentase bahan, stabilizer gum, masker astringent, target Brix & pH).
+3. Protokol uji shelf-life ASLT untuk masa simpan 12 bulan dan mitigasi pemisahan fase lemak.
+4. Langkah legalitas pabrik maklon (izin BPOM MD & sertifikasi Halal BPJPH)."
+```
+<!-- slide -->
+### 💰 CMO & CFO Dual-Lens Pricing Decision
+```text
+"Saya punya produk skincare serum pencerah wajah dengan HPP riil Rp 24.500 per botol.
+Gunakan skill pricing-decision-strategist untuk menentukan harga jual terbaik:
+1. Buat matriks 3 opsi markup (Penetration vs Sweet Spot vs Premium) lengkap dengan Gross Margin %.
+2. Analisis dual-lens: dari kacamata CMO (ruang budget iklan Meta/TikTok) vs kacamata CFO (cashflow & modal kerja).
+3. Simulasi jika produk ini mau masuk ke distributor & modern retail (Guardian/Watson).
+4. Rekomendasi psikologi harga dan struktur bundling 3-tier (Hero bundle)."
+```
 ````
 
 ---
@@ -400,6 +456,18 @@ vanzee-skills/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── performance-audit-checklist.md # Core Web Vitals, asset diet & main-thread relief
+│   ├── product-rnd-architect/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── fnb-formulation-and-shelf-life.md     # Formulation, water activity, ASLT & packaging
+│   │       ├── cosmetics-and-physical-goods-rnd.md   # Active delivery, emulsion stability, BPOM NA
+│   │       └── competitive-benchmarking-and-scaleup.md # Rival gaps, industrial scale-up, maklon SLA
+│   ├── pricing-decision-strategist/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── cogs-breakdown-and-markup-math.md     # True HPP, markup vs margin, contribution margin
+│   │       ├── marketing-psychology-and-price-anchoring.md # Value pricing, Van Westendorp, decoy tiers
+│   │       └── internal-and-external-impact-matrix.md # CMO vs CFO, allowable CAC, retail stacking
 │   ├── conversion-copywriting/
 │   │   ├── SKILL.md
 │   │   └── references/

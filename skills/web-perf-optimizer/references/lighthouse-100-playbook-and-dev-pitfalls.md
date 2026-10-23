@@ -135,3 +135,50 @@ const nextConfig = {
 
 module.exports = nextConfig;
 ```
+
+---
+
+## 🎯 7. The 97 ➔ 100 Final Frontier: Chrome Extension Poisoning & Micro-TBT
+
+When a website hits **97–98**, the remaining 2–3 points are almost always lost to two subtle factors:
+
+### A. Chrome Extension Script Poisoning (Fatal Flaw)
+* **What Happens**: If you run Lighthouse in a standard Chrome tab, your installed Chrome extensions (Adblockers, Grammarly, password managers, devtools plugins) automatically inject their own background scripts (`chrome-extension://.../contentscript.js`).
+* **The Damage**:
+  - Injects unminified code that triggers `Minify JavaScript` audit penalties.
+  - Runs synchronous DOM mutations that block the main thread for **100ms–350ms** (raising TBT and lowering Max Potential FID).
+* **The Rule**:
+  > **ALWAYS run Lighthouse in Chrome Incognito Mode (`Ctrl + Shift + N`) with "Allow in Incognito" turned OFF for all extensions.**
+  > Or run headless CLI: `npx lighthouse http://localhost:3000 --chrome-flags="--incognito --headless"`.
+
+### B. Text LCP Optimization (`<h1>` Hero Element)
+When the Largest Contentful Paint is a text heading (e.g. `<h1 ...>Mitra Solutif Pengadaan...</h1>`):
+1. **Use `next/font/google` with `display: 'swap'` or `'optional'`**:
+   ```typescript
+   import { Plus_Jakarta_Sans } from 'next/font/google';
+
+   const font = Plus_Jakarta_Sans({
+     subsets: ['latin'],
+     display: 'swap', // Or 'optional' for 0 layout shift and instant render
+     preload: true,
+   });
+   ```
+2. **Eliminate Element Render Delay**:
+   Ensure the hero section is rendered directly via SSR/RSC without waiting for `useEffect` or client-side data fetching. When SSR is used, LCP element render delay drops from 295ms to under **50ms**.
+
+### C. Tree-Shaking Unused JavaScript Chunks
+If Lighthouse flags `Reduce unused JavaScript` on `_next/static/chunks/...`:
+1. Use direct path imports for icons:
+   ```typescript
+   // ❌ Bad: Pulls in large lucide bundle index
+   import { Check, ArrowRight } from 'lucide-react';
+
+   // ✅ Good: Ensure next.config.js has optimizePackageImports: ['lucide-react']
+   ```
+2. Dynamic import below-the-fold modals and complex tabs:
+   ```typescript
+   import dynamic from 'next/dynamic';
+   const HeavyClientSection = dynamic(() => import('./HeavyClientSection'), {
+     ssr: true, // Still SSR for SEO, but splits the JS chunk!
+   });
+   ```

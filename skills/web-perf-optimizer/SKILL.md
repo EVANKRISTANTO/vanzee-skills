@@ -24,16 +24,16 @@ A production-grade performance engineering runbook for shipping lightning-fast, 
 
 ---
 
-## 🚨 The Golden Benchmark Rule: Production vs. Development
+## 🚨 The Golden Benchmark Rules: Production & Clean Incognito
 
-> **CRITICAL PITFALL**: Never benchmark Lighthouse on `npm run dev` or `next dev` (`localhost:3000`)!
-> - In development mode, Next.js injects the unminified React development runtime (`scheduler.development.js`), active HMR WebSockets (which permanently disables BF-Cache), unminified CSS, and `Cache-Control: no-store`. This falsely drops the performance score to **50–65**.
-> - **Always build and run production before auditing**:
->   ```bash
->   npm run build
->   npm run start
->   ```
->   In production mode, tree-shaking purges unused code, bundles are minified with SWC/Terser, development schedulers are removed, and TBT plummets from **2,900ms to < 50ms**.
+1. **Always Audit on Production Builds**:
+   Never benchmark Lighthouse on `npm run dev` or `next dev` (`localhost:3000`)! Always run:
+   ```bash
+   npm run build
+   npm run start
+   ```
+2. **Always Audit in Clean Incognito Mode (`Ctrl + Shift + N`)**:
+   Chrome extensions (Adblockers, password managers, devtools) inject unminified content scripts (`chrome-extension://...`) that execute on the main thread, adding **100ms–350ms of artificial Total Blocking Time (TBT)** and triggering unminified JS warnings. Running in Incognito guarantees clean zero-interference testing.
 
 ---
 
